@@ -287,7 +287,18 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import heroVideo from '/src/assets/hero.mp4';
-
+import hp from '/src/assets/clients/hp.png'
+import sail from '/src/assets/clients/sail.png'
+import meil from '/src/assets/clients/meil.png'
+import indianoil from '/src/assets/clients/indianoil.png'
+import coalindia from '/src/assets/clients/coalindia.png'
+import bhel from '/src/assets/clients/bhel.png'
+import bharatpetrol from '/src/assets/clients/bharatpetrol.png'
+import bekem from '/src/assets/clients/bekem.png'
+import bbj from '/src/assets/clients/bbj.png'
+import br from '/src/assets/clients/br.png'
+import jindal from '/src/assets/clients/jindal.png'
+import lt from '/src/assets/clients/lt.png'
 const carousel = ref(null)
 
 const scrollRight = () => {
@@ -298,66 +309,18 @@ const scrollLeft = () => {
   carousel.value?.scrollBy({ left: -400, behavior: 'smooth' })
 }
 const clients = ref([
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/hp.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/sail.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/meil.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/indianoil.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/coalindia.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/bhel.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/bharatpetrol.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/bekem.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/bbj.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/b&r.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/jindal.png'
-  },
-  {
-    name: 'HP',
-    color: '#A85750',
-    logo: '/src/assets/clients/l&t.png'
-  },
+  { name: 'HP', logo: hp },
+  { name: 'SAIL', logo: sail },
+  { name: 'MEIL', logo: meil },
+  { name: 'Indian Oil', logo: indianoil },
+  { name: 'Coal India', logo: coalindia },
+  { name: 'BHEL', logo: bhel },
+  { name: 'Bharat Petroleum', logo: bharatpetrol },
+  { name: 'Bekem', logo: bekem },
+  { name: 'BBJ', logo: bbj },
+  { name: 'B&R', logo: br },
+  { name: 'Jindal', logo: jindal },
+  { name: 'L&T', logo: lt },
 ])
 const stats = [
   { value: '50+', label: 'Years Experience' },
@@ -366,14 +329,23 @@ const stats = [
   { value: '20K+', label: 'MT Steel Monthly' },
   { value: '40+', label: 'Years ODC Expertise' },
   { value: 'Pan-India', label: 'Nationwide Presence' },
-  { value: '72+', label: 'Trailers in Fleet' },
-  { value: '52+', label: 'Hydraulic Axles' },
+
+  // Updated Fleet Strength
+  { value: '80+', label: 'Trailers in Fleet' },
+  { value: '60+', label: 'Hydraulic Axles' },
+  { value: '10+', label: 'Cranes Available' },
+  { value: '10+', label: 'Ammonia Tankers' },
   { value: '75+', label: 'LPG Tankers' },
-  { value: '7+', label: 'Cranes Available' },
-  { value: '7+', label: 'Ammonia Tankers' },
   { value: '6+', label: 'Branch Locations' },
-  { value: '125 ft', label: 'Max Girder Length Moved' },
-  { value: '150 MT', label: 'Max Girder Weight Moved' },
+
+  // Capabilities & Equipment
+  { value: '150+ MT', label: 'Crane Lifting Capacity' },
+  { value: 'Crawler & AT', label: 'Advanced Crane Types' },
+  { value: 'Low & Semi-Low', label: 'Bed Trailers Available' },
+  { value: '5+', label: 'Boom Placers' },
+  { value: '5+', label: 'Telehandlers' },
+
+  // Industry Footprint
   { value: '5+', label: 'Industry Sectors Served' },
   { value: '1st in East', label: 'Pioneers in Girder Transport' }
 ]
