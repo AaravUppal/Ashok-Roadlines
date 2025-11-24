@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* WRAPPERS */
+.marquee-right,
+.marquee-left {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* TRACK */
+.marquee-track {
+  display: inline-flex;
+}
+
+/* STAT CARD */
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  min-width: 260px;
+  margin-right: 2rem; /* consistent spacing */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ✅ Right → Left (Ultra Slow) */
+.marquee-left .marquee-track {
+  animation: marqueeLeft 80s linear infinite;
+}
+
+/* ✅ Left → Right (Ultra Slow) */
+.marquee-right .marquee-track {
+  animation: marqueeRight 80s linear infinite;
+}
+
+/* ✅ KEYFRAMES */
+@keyframes marqueeLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
