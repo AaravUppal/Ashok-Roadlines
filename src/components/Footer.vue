@@ -1,7 +1,6 @@
 <template>
   <footer class="bg-gradient-to-b from-gray-900 to-black text-white relative z-20">
     <!-- Decorative top border -->
-    <div class="h-1 bg-gradient-to-r from-transparent via-[#A85750] to-transparent"></div>
     
     <div class="container mx-auto px-4 py-16">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
