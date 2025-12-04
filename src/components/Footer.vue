@@ -1,34 +1,50 @@
 <template>
-  <footer class="bg-gradient-to-b from-gray-900 to-black text-white relative z-20">
-    <!-- Decorative top border -->
+  <footer class="bg-gradient-to-b from-gray-900 to-black text-white relative z-20 overflow-hidden">
+    <!-- Animated background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#A85750] rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#A85750] rounded-full blur-3xl animate-pulse delay-1000"></div>
+    </div>
+
+    <!-- Decorative top border with gradient -->
+    <div class="h-1 bg-gradient-to-r from-transparent via-[#A85750] to-transparent"></div>
     
-    <div class="container mx-auto px-4 py-16">
+    <div class="container mx-auto px-4 py-16 relative">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <!-- Company Info -->
         <div class="space-y-4">
           <div class="flex items-center space-x-3 mb-6">
-            <div class="bg-[#A85750] p-3 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300">
+            <div class="bg-gradient-to-br from-[#A85750] to-[#8a4640] p-3 rounded-xl shadow-2xl hover:scale-110 transition-transform duration-300 hover:rotate-6">
               <i class="pi pi-truck text-3xl text-white"></i>
             </div>
             <div>
-              <h3 class="text-2xl font-bold">Ashok Roadlines</h3>
-              <p class="text-[#A85750] text-sm font-semibold tracking-wider">LOGISTICS</p>
+              <h3 class="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                Ashok Roadlines
+              </h3>
+              <p class="text-[#A85750] text-sm font-bold tracking-widest">LOGISTICS</p>
             </div>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed">
+          <p class="text-gray-300 text-sm leading-relaxed font-medium">
             Through Innovation, Dedication & Technology
           </p>
-          <div class="pt-4">
-            <p class="text-gray-500 text-xs mb-3">Connect with us</p>
+          <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-700/50">
+            <p class="text-xs text-[#A85750] font-semibold mb-1">Est. 1974</p>
+            <p class="text-xs text-gray-400">Eastern India's Most Diversified Transport Group</p>
+          </div>
+          <div class="pt-2">
+            <p class="text-gray-500 text-xs mb-3 uppercase tracking-wider">Connect with us</p>
             <div class="flex gap-3">
-              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-[#A85750] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-[#A85750] hover:to-[#8a4640] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg">
                 <i class="pi pi-facebook"></i>
               </a>
-              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-[#A85750] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-[#A85750] hover:to-[#8a4640] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg">
                 <i class="pi pi-linkedin"></i>
               </a>
-              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-[#A85750] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-[#A85750] hover:to-[#8a4640] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg">
                 <i class="pi pi-twitter"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-[#A85750] hover:to-[#8a4640] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg">
+                <i class="pi pi-instagram"></i>
               </a>
             </div>
           </div>
@@ -36,39 +52,45 @@
 
         <!-- Quick Links -->
         <div>
-          <h4 class="text-xl font-bold mb-6 text-white relative inline-block">
+          <h4 class="text-xl font-bold mb-6 text-white relative inline-block pb-2">
             Quick Links
-            <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-[#A85750]"></span>
+            <span class="absolute bottom-0 left-0 w-16 h-1 bg-gradient-to-r from-[#A85750] to-transparent rounded-full"></span>
           </h4>
           <ul class="space-y-3">
             <li>
               <router-link to="/" class="text-gray-400 hover:text-[#A85750] transition-all duration-300 flex items-center group">
-                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform"></i>
-                <span class="group-hover:tracking-wide transition-all">Home</span>
+                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                <span class="group-hover:tracking-wide transition-all duration-300">Home</span>
               </router-link>
             </li>
             <li>
               <router-link to="/about" class="text-gray-400 hover:text-[#A85750] transition-all duration-300 flex items-center group">
-                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform"></i>
-                <span class="group-hover:tracking-wide transition-all">About Us</span>
+                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                <span class="group-hover:tracking-wide transition-all duration-300">About Us</span>
               </router-link>
             </li>
             <li>
               <router-link to="/services" class="text-gray-400 hover:text-[#A85750] transition-all duration-300 flex items-center group">
-                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform"></i>
-                <span class="group-hover:tracking-wide transition-all">Services</span>
+                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                <span class="group-hover:tracking-wide transition-all duration-300">Services</span>
               </router-link>
             </li>
             <li>
               <router-link to="/contact" class="text-gray-400 hover:text-[#A85750] transition-all duration-300 flex items-center group">
-                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform"></i>
-                <span class="group-hover:tracking-wide transition-all">Contact</span>
+                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                <span class="group-hover:tracking-wide transition-all duration-300">Contact</span>
               </router-link>
             </li>
             <li>
               <a href="#" class="text-gray-400 hover:text-[#A85750] transition-all duration-300 flex items-center group">
-                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform"></i>
-                <span class="group-hover:tracking-wide transition-all">Track Shipment</span>
+                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                <span class="group-hover:tracking-wide transition-all duration-300">Track Shipment</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-[#A85750] transition-all duration-300 flex items-center group">
+                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                <span class="group-hover:tracking-wide transition-all duration-300">Fleet Strength</span>
               </a>
             </li>
           </ul>
@@ -76,80 +98,111 @@
 
         <!-- Transport Services -->
         <div>
-          <h4 class="text-xl font-bold mb-6 text-white relative inline-block">
+          <h4 class="text-xl font-bold mb-6 text-white relative inline-block pb-2">
             Our Services
-            <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-[#A85750]"></span>
+            <span class="absolute bottom-0 left-0 w-16 h-1 bg-gradient-to-r from-[#A85750] to-transparent rounded-full"></span>
           </h4>
           <ul class="space-y-2.5 text-sm">
-            <li v-for="service in services" :key="service" class="text-gray-400 hover:text-gray-300 transition-colors cursor-pointer flex items-center">
-              <span class="w-1.5 h-1.5 bg-[#A85750] rounded-full mr-2"></span>
-              {{ service }}
+            <li v-for="service in services" :key="service" class="text-gray-400 hover:text-gray-200 transition-all duration-300 cursor-pointer flex items-center group">
+              <span class="w-1.5 h-1.5 bg-[#A85750] rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></span>
+              <span class="group-hover:translate-x-1 transition-transform duration-300">{{ service }}</span>
             </li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
-        <div>
-          <h4 class="text-xl font-bold mb-6 text-white relative inline-block">
-            Get In Touch
-            <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-[#A85750]"></span>
-          </h4>
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start gap-3 group cursor-pointer">
-              <div class="mt-1 p-2 bg-gray-800 rounded-lg group-hover:bg-[#A85750] transition-colors">
-                <i class="pi pi-map-marker text-lg"></i>
-              </div>
-              <span class="text-gray-400 text-sm flex-1">Transport Nagar, India</span>
-            </li>
-            <li class="flex items-center gap-3 group cursor-pointer">
-              <div class="p-2 bg-gray-800 rounded-lg group-hover:bg-[#A85750] transition-colors">
-                <i class="pi pi-phone text-lg"></i>
-              </div>
-              <span class="text-gray-400 text-sm">+91 XXXXXXXXXX</span>
-            </li>
-            <li class="flex items-center gap-3 group cursor-pointer">
-              <div class="p-2 bg-gray-800 rounded-lg group-hover:bg-[#A85750] transition-colors">
-                <i class="pi pi-envelope text-lg"></i>
-              </div>
-              <span class="text-gray-400 text-sm">info@ashokroadlines.com</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <div class="p-2 bg-[#A85750] rounded-lg">
-                <i class="pi pi-clock text-lg"></i>
-              </div>
-              <span class="text-white text-sm font-semibold">24/7 Support</span>
-            </li>
-          </ul>
-          
-          <!-- Rental Services -->
-          <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700 hover:border-[#A85750] transition-colors">
-            <h5 class="text-white font-semibold mb-3 text-sm flex items-center">
-              <span class="w-2 h-2 bg-[#A85750] rounded-full mr-2"></span>
-              Rental Services
-            </h5>
-            <ul class="space-y-1.5 text-xs">
-              <li class="text-gray-400">• Normal & Low Bed Trailers</li>
-              <li class="text-gray-400">• Hydraulic Axles</li>
-              <li class="text-gray-400">• Crawler Crane</li>
+        <!-- Contact Info & Rental -->
+        <div class="space-y-6">
+          <div>
+            <h4 class="text-xl font-bold mb-6 text-white relative inline-block pb-2">
+              Get In Touch
+              <span class="absolute bottom-0 left-0 w-16 h-1 bg-gradient-to-r from-[#A85750] to-transparent rounded-full"></span>
+            </h4>
+            <ul class="space-y-4">
+              <!-- Corporate Office -->
+              <li class="flex items-start gap-3 group cursor-pointer">
+                <div class="mt-1 p-2 bg-gray-800/70 rounded-lg group-hover:bg-[#A85750] transition-all duration-300 shadow-lg">
+                  <i class="pi pi-map-marker text-lg"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-xs text-gray-500 mb-0.5">Corporate Office</p>
+                  <span class="text-gray-300 text-sm leading-relaxed">79, Sambhunath Pandit Street, Kolkata-700 020</span>
+                </div>
+              </li>
+              
+              <!-- Email -->
+              <li class="flex items-start gap-3 group cursor-pointer">
+                <div class="mt-0.5 p-2 bg-gray-800/70 rounded-lg group-hover:bg-[#A85750] transition-all duration-300 shadow-lg">
+                  <i class="pi pi-envelope text-lg"></i>
+                </div>
+                <div class="flex-1">
+                  <a href="mailto:mkp@ashokroadlines.com" class="text-gray-300 text-sm hover:text-[#A85750] transition-colors block">
+                    mkp@ashokroadlines.com
+                  </a>
+                  <a href="mailto:sundeep@ashokroadlines.com" class="text-gray-400 text-xs hover:text-[#A85750] transition-colors block">
+                    sundeep@ashokroadlines.com
+                  </a>
+                </div>
+              </li>
+
+              <!-- 24/7 Support Badge -->
+              <li class="flex items-center gap-3">
+                <div class="p-2 bg-gradient-to-br from-[#A85750] to-[#8a4640] rounded-lg shadow-xl">
+                  <i class="pi pi-clock text-lg"></i>
+                </div>
+                <div>
+                  <span class="text-white text-sm font-bold block">24/7 Support</span>
+                  <span class="text-gray-400 text-xs">All India Operations</span>
+                </div>
+              </li>
             </ul>
+          </div>
+          
+
+          <!-- Fleet Stats -->
+          <div class="grid grid-cols-3 gap-2 text-center">
+            <div class="bg-gray-800/50 p-2 rounded-lg border border-gray-700/50 hover:border-[#A85750]/50 transition-all duration-300">
+              <p class="text-[#A85750] font-bold text-lg">72</p>
+              <p class="text-gray-400 text-xs">Trailers</p>
+            </div>
+            <div class="bg-gray-800/50 p-2 rounded-lg border border-gray-700/50 hover:border-[#A85750]/50 transition-all duration-300">
+              <p class="text-[#A85750] font-bold text-lg">52</p>
+              <p class="text-gray-400 text-xs">Hydraulic Axles</p>
+            </div>
+            <div class="bg-gray-800/50 p-2 rounded-lg border border-gray-700/50 hover:border-[#A85750]/50 transition-all duration-300">
+              <p class="text-[#A85750] font-bold text-lg">75</p>
+              <p class="text-gray-400 text-xs">LPG Tankers</p>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- Branch Locations -->
+      <div class="mb-12 pb-8 border-b border-gray-800">
+        <h4 class="text-lg font-bold mb-6 text-white text-center">Our Presence Across India</h4>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span v-for="location in locations" :key="location" 
+                class="px-4 py-2 bg-gray-800/70 hover:bg-[#A85750] text-gray-300 hover:text-white text-sm rounded-full transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-lg">
+            <i class="pi pi-map-marker mr-1.5 text-xs"></i>{{ location }}
+          </span>
+        </div>
+      </div>
+
       <!-- Bottom Bar -->
-      <div class="border-t border-gray-800 pt-8 mt-8">
+      <div class="pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-gray-500 text-sm">
             © {{ currentYear }} Ashok Roadlines. All rights reserved.
+            <span class="text-gray-600 mx-2">|</span>
+            <span class="text-gray-600 text-xs">Pioneering logistics since 1974</span>
           </p>
           <div class="flex gap-6 text-sm">
-            <a href="#" class="text-gray-500 hover:text-[#A85750] transition-colors duration-300 hover:underline">
+            <a href="#" class="text-gray-500 hover:text-[#A85750] transition-all duration-300 hover:underline hover:tracking-wide">
               Privacy Policy
             </a>
-            <a href="#" class="text-gray-500 hover:text-[#A85750] transition-colors duration-300 hover:underline">
+            <a href="#" class="text-gray-500 hover:text-[#A85750] transition-all duration-300 hover:underline hover:tracking-wide">
               Terms of Service
             </a>
-            <a href="#" class="text-gray-500 hover:text-[#A85750] transition-colors duration-300 hover:underline">
+            <a href="#" class="text-gray-500 hover:text-[#A85750] transition-all duration-300 hover:underline hover:tracking-wide">
               Sitemap
             </a>
           </div>
@@ -165,12 +218,40 @@ import { computed } from 'vue';
 const currentYear = computed(() => new Date().getFullYear());
 
 const services = [
-  'Bridge Girder Transport',
-  'Port Container Services',
-  'OD/OW Cargo',
-  'Steel Transport',
-  'Gas Transport',
+  'Bridge Girder & Segment Transport',
+  'Port Container Services (TEU/FEU)',
+  'ODC/OWC Cargo',
+  'Finished Steel Transport',
+  'Gas Transport (LPG & Ammonia)',
   'Project Cargo',
+  'Industrial Products',
   'Pipe Transport'
 ];
+
+const locations = [
+  'Kolkata',
+  'Raigarh',
+  'Surat',
+  'Durgapur',
+  'Bhilai',
+  'Ahmedabad',
+  'Rourkela',
+  'Vishakhapatnam',
+  'Vadodara'
+];
 </script>
+
+<style scoped>
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+</style>

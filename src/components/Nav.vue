@@ -47,7 +47,7 @@
           <!-- Equipment Mega Menu -->
           <div 
             class="relative group/equipment"
-            @mouseenter="showEquipmentMenu = true"
+            @mouseenter="handleEquipmentEnter"
             @mouseleave="handleEquipmentLeave"
           >
             <button
@@ -67,8 +67,6 @@
               <div 
                 v-show="showEquipmentMenu"
                 class="absolute top-full left-0 pt-4 w-80 z-50"
-                @mouseenter="showEquipmentMenu = true"
-                @mouseleave="handleEquipmentLeave"
               >
                 <div class="bg-white/98 backdrop-blur-xl shadow-2xl border border-gray-200/50 rounded-2xl overflow-visible">
                   <div class="p-3 space-y-1">
@@ -76,7 +74,7 @@
                     <div 
                       class="group/item relative"
                       @mouseenter="activeEquipment = 'trailers'"
-                      @mouseleave="handleSubmenuLeave"
+                      @mouseleave="clearActiveEquipment"
                     >
                       <router-link
                         to="/equipment/trailers"
@@ -97,8 +95,6 @@
                         <div 
                           v-show="activeEquipment === 'trailers'"
                           class="absolute left-full top-0 ml-2 w-72 bg-white/98 backdrop-blur-xl shadow-2xl border border-gray-200/50 rounded-2xl overflow-hidden z-50"
-                          @mouseenter="activeEquipment = 'trailers'"
-                          @mouseleave="handleSubmenuLeave"
                         >
                           <div class="p-3 space-y-1">
                             <router-link 
@@ -138,6 +134,7 @@
                     <router-link 
                       to="/equipment/hydraulic-axles"
                       class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      @mouseenter="activeEquipment = null"
                     >
                       <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
                         <i class="pi pi-cog text-[#A85750] text-sm"></i>
@@ -149,6 +146,7 @@
                     <router-link 
                       to="/equipment/pullers"
                       class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      @mouseenter="activeEquipment = null"
                     >
                       <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
                         <i class="pi pi-arrows-h text-[#A85750] text-sm"></i>
@@ -160,7 +158,7 @@
                     <div 
                       class="group/item relative"
                       @mouseenter="activeEquipment = 'crane'"
-                      @mouseleave="handleSubmenuLeave"
+                      @mouseleave="clearActiveEquipment"
                     >
                       <router-link
                         to="/equipment/crane"
@@ -181,8 +179,6 @@
                         <div 
                           v-show="activeEquipment === 'crane'"
                           class="absolute left-full top-0 ml-2 w-72 bg-white/98 backdrop-blur-xl shadow-2xl border border-gray-200/50 rounded-2xl overflow-hidden z-50"
-                          @mouseenter="activeEquipment = 'crane'"
-                          @mouseleave="handleSubmenuLeave"
                         >
                           <div class="p-3 space-y-1">
                             <router-link 
@@ -208,6 +204,7 @@
                     <router-link 
                       to="/equipment/pick-and-carry"
                       class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      @mouseenter="activeEquipment = null"
                     >
                       <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
                         <i class="pi pi-box text-[#A85750] text-sm"></i>
@@ -219,6 +216,7 @@
                     <router-link 
                       to="/equipment/telehandler"
                       class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      @mouseenter="activeEquipment = null"
                     >
                       <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
                         <i class="pi pi-forward text-[#A85750] text-sm"></i>
@@ -230,6 +228,7 @@
                     <router-link 
                       to="/equipment/boom-placer"
                       class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      @mouseenter="activeEquipment = null"
                     >
                       <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
                         <i class="pi pi-th-large text-[#A85750] text-sm"></i>
@@ -241,6 +240,7 @@
                     <router-link 
                       to="/equipment/lpg-tanker"
                       class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      @mouseenter="activeEquipment = null"
                     >
                       <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
                         <i class="pi pi-circle text-[#A85750] text-sm"></i>
@@ -252,6 +252,7 @@
                     <router-link 
                       to="/equipment/ammonia-tanker"
                       class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      @mouseenter="activeEquipment = null"
                     >
                       <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
                         <i class="pi pi-database text-[#A85750] text-sm"></i>
@@ -568,7 +569,7 @@ const mobileEquipmentOpen = ref(false);
 const mobileTrailersOpen = ref(false);
 const mobileCraneOpen = ref(false);
 
-let submenuTimeout = null;
+let equipmentTimeout = null;
 
 const toggleMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value;
@@ -586,19 +587,28 @@ const closeMobileMenu = () => {
   mobileCraneOpen.value = false;
 };
 
-const handleEquipmentLeave = () => {
-  // Add small delay before closing to prevent accidental closes
-  submenuTimeout = setTimeout(() => {
-    showEquipmentMenu.value = false;
-    activeEquipment.value = null;
-  }, 100);
+const handleEquipmentEnter = () => {
+  if (equipmentTimeout) {
+    clearTimeout(equipmentTimeout);
+    equipmentTimeout = null;
+  }
+  showEquipmentMenu.value = true;
 };
 
-const handleSubmenuLeave = () => {
-  // Add delay before closing submenu
-  submenuTimeout = setTimeout(() => {
+const handleEquipmentLeave = () => {
+  equipmentTimeout = setTimeout(() => {
+    showEquipmentMenu.value = false;
     activeEquipment.value = null;
-  }, 100);
+  }, 150);
+};
+
+const clearActiveEquipment = () => {
+  // Don't clear immediately - only clear after a delay if not hovering another submenu item
+  setTimeout(() => {
+    if (activeEquipment.value !== 'trailers' && activeEquipment.value !== 'crane') {
+      activeEquipment.value = null;
+    }
+  }, 50);
 };
 
 const updateScrollProgress = () => {
@@ -619,8 +629,8 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', updateScrollProgress);
-  if (submenuTimeout) {
-    clearTimeout(submenuTimeout);
+  if (equipmentTimeout) {
+    clearTimeout(equipmentTimeout);
   }
 });
 </script>
