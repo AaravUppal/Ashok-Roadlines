@@ -140,7 +140,7 @@
     <div class="bg-white">
       
       <!-- About Section -->
-      <section id="about" ref="aboutSection" class="py-16 md:py-20 bg-gray-900">
+      <section id="about" ref="aboutSection" class="py-16 md:py-20 bg-black relative">
         <div class="container mx-auto px-6">
           <div class="max-w-7xl mx-auto">
             
