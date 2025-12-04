@@ -13,7 +13,7 @@
             <!-- Glow Effect -->
             <div class="absolute inset-0 bg-gradient-to-r from-[#A85750] to-[#c96860] rounded-xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
             <img 
-              src="../assets/logo.png" 
+              src="/assets/logo.png" 
               alt="Ashok Roadlines" 
               class="h-14 w-auto relative z-10 drop-shadow-2xl transition-transform duration-300 group-hover:rotate-3"
             />

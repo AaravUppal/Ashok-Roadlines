@@ -348,35 +348,35 @@ const heroSlides = ref([
   {
     id: 1,
     type: 'video',
-    media: '/src/assets/hero.mp4',
+    media: '/assets/hero.mp4',
     title: 'ASHOK ROADLINES',
     subtitle: 'Logistics Through Innovation, Dedication & Technology'
   },
   {
     id: 2,
     type: 'image',
-    media: '/src/assets/hero5.png',
+    media: '/assets/hero5.png',
     title: 'HEAVY TRANSPORT SPECIALISTS',
     subtitle: '50+ Years of Excellence in ODC & Project Cargo'
   },
   {
     id: 3,
     type: 'image',
-    media: '/src/assets/hero1.jpeg',
+    media: '/assets/hero1.jpeg',
     title: 'PAN-INDIA NETWORK',
     subtitle: 'Connecting Industries Across the Nation'
   },
   {
     id: 4,
     type: 'image',
-    media: '/src/assets/hero3.png',
+    media: '/assets/hero3.png',
     title: 'INNOVATION DRIVEN',
     subtitle: 'Advanced Technology for Modern Logistics'
   },
   {
     id: 5,
     type: 'image',
-    media: '/src/assets/hero4.png',
+    media: '/assets/hero4.png',
     title: 'TRUSTED BY LEADERS',
     subtitle: 'Serving Indias Premier PSUs & Corporations'
   }
@@ -474,18 +474,18 @@ const sectors = ref([
 ])
 
 const clients = ref([
-  { name: 'HP', logo: '/src/assets/clients/hp.png' },
-  { name: 'SAIL', logo: '/src/assets/clients/sail.png' },
-  { name: 'MEIL', logo: '/src/assets/clients/meil.png' },
-  { name: 'Indian Oil', logo: '/src/assets/clients/indianoil.png' },
-  { name: 'Coal India', logo: '/src/assets/clients/coalindia.png' },
-  { name: 'BHEL', logo: '/src/assets/clients/bhel.png' },
-  { name: 'Bharat Petroleum', logo: '/src/assets/clients/bharatpetrol.png' },
-  { name: 'Bekem', logo: '/src/assets/clients/bekem.png' },
-  { name: 'BBJ', logo: '/src/assets/clients/bbj.png' },
-  { name: 'B&R', logo: '/src/assets/clients/br.png' },
-  { name: 'Jindal', logo: '/src/assets/clients/jindal.png' },
-  { name: 'L&T', logo: '/src/assets/clients/lt.png' },
+  { name: 'HP', logo: '/assets/clients/hp.png' },
+  { name: 'SAIL', logo: '/assets/clients/sail.png' },
+  { name: 'MEIL', logo: '/assets/clients/meil.png' },
+  { name: 'Indian Oil', logo: '/assets/clients/indianoil.png' },
+  { name: 'Coal India', logo: '/assets/clients/coalindia.png' },
+  { name: 'BHEL', logo: '/assets/clients/bhel.png' },
+  { name: 'Bharat Petroleum', logo: '/assets/clients/bharatpetrol.png' },
+  { name: 'Bekem', logo: '/assets/clients/bekem.png' },
+  { name: 'BBJ', logo: '/assets/clients/bbj.png' },
+  { name: 'B&R', logo: '/assets/clients/br.png' },
+  { name: 'Jindal', logo: '/assets/clients/jindal.png' },
+  { name: 'L&T', logo: '/assets/clients/lt.png' },
 ])
 
 const handleScroll = () => {
@@ -526,6 +526,7 @@ onBeforeUnmount(() => {
   stopAutoSlide()
 })
 </script>
+
 
 <style scoped>
 .marquee-content {
