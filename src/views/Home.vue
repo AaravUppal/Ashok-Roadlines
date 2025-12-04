@@ -477,7 +477,7 @@ const clients = ref([
   { name: 'HP', logo: '/assets/clients/hp.png' },
   { name: 'SAIL', logo: '/assets/clients/sail.png' },
   { name: 'MEIL', logo: '/assets/clients/meil.png' },
-  { name: 'Indian Oil', logo: '/assets/clients/indianoil.png' },
+  { name: 'Indian Oil', logo: '/assets/clients/Indianoil.png' },
   { name: 'Coal India', logo: '/assets/clients/coalindia.png' },
   { name: 'BHEL', logo: '/assets/clients/bhel.png' },
   { name: 'Bharat Petroleum', logo: '/assets/clients/bharatpetrol.png' },
