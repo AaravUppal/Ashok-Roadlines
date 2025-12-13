@@ -4,25 +4,25 @@
     <!-- Hero Section -->
     <section class="relative bg-gray-900 pt-32 pb-20 overflow-hidden">
       <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#A85750] rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#A85750] rounded-full blur-3xl"></div>
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#9F153E] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#9F153E] rounded-full blur-3xl"></div>
       </div>
       
       <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
-          <div class="inline-flex items-center gap-2 mb-6 bg-[#A85750]/20 backdrop-blur-md border border-[#A85750]/40 px-5 py-2 rounded-full">
-            <div class="w-2 h-2 bg-[#A85750] rounded-full animate-pulse"></div>
+          <div class="inline-flex items-center gap-2 mb-6 bg-[#9F153E]/20 backdrop-blur-md border border-[#9F153E]/40 px-5 py-2 rounded-full">
+            <div class="w-2 h-2 bg-[#9F153E] rounded-full animate-pulse"></div>
             <span class="text-sm font-bold tracking-wider">SPECIALIZED LOGISTICS</span>
           </div>
           
           <h1 class="text-5xl md:text-6xl font-black mb-6">
-            Our <span class="text-[#A85750]">Services</span>
+            Our <span class="text-[#9F153E]">Services</span>
           </h1>
           
           <div class="flex items-center justify-center gap-2 mb-6">
-            <div class="h-px w-12 bg-[#A85750]"></div>
-            <div class="w-2 h-2 bg-[#A85750] rounded-full"></div>
-            <div class="h-px w-12 bg-[#A85750]"></div>
+            <div class="h-px w-12 bg-[#9F153E]"></div>
+            <div class="w-2 h-2 bg-[#9F153E] rounded-full"></div>
+            <div class="h-px w-12 bg-[#9F153E]"></div>
           </div>
           
           <p class="text-xl text-gray-300">
@@ -42,7 +42,7 @@
             @click="scrollToService(service.id)"
             class="whitespace-nowrap px-5 py-2 rounded-full font-semibold text-sm transition-all duration-300 flex-shrink-0"
             :class="activeService === service.id 
-              ? 'bg-[#A85750] text-white shadow-lg' 
+              ? 'bg-[#9F153E] text-white shadow-lg' 
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
           >
             <i :class="service.icon" class="mr-2"></i>
@@ -60,13 +60,13 @@
         <div :id="'service-project-cargo'" ref="projectCargoRef" class="mb-24 scroll-mt-32">
           <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div class="order-2 lg:order-1">
-              <div class="inline-flex items-center gap-2 bg-[#A85750]/10 px-4 py-2 rounded-full mb-4">
-                <i class="pi pi-box text-[#A85750]"></i>
-                <span class="text-[#A85750] font-bold text-xs uppercase tracking-wider">Heavy Logistics</span>
+              <div class="inline-flex items-center gap-2 bg-[#9F153E]/10 px-4 py-2 rounded-full mb-4">
+                <i class="pi pi-box text-[#9F153E]"></i>
+                <span class="text-[#9F153E] font-bold text-xs uppercase tracking-wider">Heavy Logistics</span>
               </div>
               
               <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-                Project Cargo <span class="text-[#A85750]">Transportation</span>
+                Project Cargo <span class="text-[#9F153E]">Transportation</span>
               </h2>
               
               <p class="text-base text-gray-600 mb-6 leading-relaxed">
@@ -75,7 +75,7 @@
 
               <div class="space-y-3 mb-6">
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -106,15 +106,15 @@
               </div>
 
               <div class="grid grid-cols-3 gap-3">
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">100+</p>
                   <p class="text-xs">Machines</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">40+</p>
                   <p class="text-xs">Years</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">24/7</p>
                   <p class="text-xs">Support</p>
                 </div>
@@ -122,19 +122,18 @@
             </div>
 
             <div class="order-1 lg:order-2">
-              <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl">
-                <i class="pi pi-box text-[#A85750] text-8xl opacity-20"></i>
-                <div class="mt-6 space-y-2">
+              <div class="relative bg-gradient-to-br from-gray-900 to-gray-900 rounded-2xl p-8 shadow-xl">
+                <div class=" space-y-2">
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Specialized Low Bed Trailers</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Multi-Authority Coordination</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Custom Transport Solutions</span>
                   </div>
                 </div>
@@ -148,18 +147,17 @@
           <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl">
-                <i class="pi pi-building text-[#A85750] text-8xl opacity-20"></i>
-                <div class="mt-6 space-y-2">
+                <div class=" space-y-2">
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Pan-India Steel Delivery</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Direct SAIL Plant Access</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Real-time Tracking</span>
                   </div>
                 </div>
@@ -167,13 +165,13 @@
             </div>
 
             <div>
-              <div class="inline-flex items-center gap-2 bg-[#A85750]/10 px-4 py-2 rounded-full mb-4">
-                <i class="pi pi-building text-[#A85750]"></i>
-                <span class="text-[#A85750] font-bold text-xs uppercase tracking-wider">Industrial Transport</span>
+              <div class="inline-flex items-center gap-2 bg-[#9F153E]/10 px-4 py-2 rounded-full mb-4">
+                <i class="pi pi-building text-[#9F153E]"></i>
+                <span class="text-[#9F153E] font-bold text-xs uppercase tracking-wider">Industrial Transport</span>
               </div>
               
               <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-                Finished Steel <span class="text-[#A85750]">Transport</span>
+                Finished Steel <span class="text-[#9F153E]">Transport</span>
               </h2>
               
               <p class="text-base text-gray-600 mb-6 leading-relaxed">
@@ -182,7 +180,7 @@
 
               <div class="space-y-3 mb-6">
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -192,7 +190,7 @@
                 </div>
 
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -203,15 +201,15 @@
               </div>
 
               <div class="grid grid-cols-3 gap-3">
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">20K+</p>
                   <p class="text-xs">MT Monthly</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">6</p>
                   <p class="text-xs">Plant Hubs</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">100%</p>
                   <p class="text-xs">On-Time</p>
                 </div>
@@ -224,34 +222,24 @@
         <div :id="'service-odc-owc'" ref="odcOwcRef" class="mb-24 scroll-mt-32">
           <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div class="order-2 lg:order-1">
-              <div class="inline-flex items-center gap-2 bg-[#A85750]/10 px-4 py-2 rounded-full mb-4">
-                <i class="pi pi-truck text-[#A85750]"></i>
-                <span class="text-[#A85750] font-bold text-xs uppercase tracking-wider">Specialized Cargo</span>
+              <div class="inline-flex items-center gap-2 bg-[#9F153E]/10 px-4 py-2 rounded-full mb-4">
+                <i class="pi pi-truck text-[#9F153E]"></i>
+                <span class="text-[#9F153E] font-bold text-xs uppercase tracking-wider">Specialized Cargo</span>
               </div>
               
               <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-                ODC & OWC <span class="text-[#A85750]">Transport</span>
+                ODC & OWC <span class="text-[#9F153E]">Transport</span>
               </h2>
               
               <p class="text-base text-gray-600 mb-6 leading-relaxed">
                 40+ years expertise in overdimensional cargo. Customized low bed trailers for extreme loads with complete route planning.
               </p>
 
-              <div class="bg-amber-50 rounded-xl p-4 border-2 border-amber-200 mb-6">
-                <div class="flex items-start gap-3">
-                  <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i class="pi pi-trophy text-white"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 text-sm mb-1">Featured in SAIL CMO News (1991)</h4>
-                    <p class="text-xs text-gray-700">27' x 16.4' x 18.11' cargo (41.46 MT) from Kolkata to Rourkela</p>
-                  </div>
-                </div>
-              </div>
+              
 
               <div class="space-y-3 mb-6">
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -261,7 +249,7 @@
                 </div>
 
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -272,15 +260,15 @@
               </div>
 
               <div class="grid grid-cols-3 gap-3">
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">40+</p>
                   <p class="text-xs">Years</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">500</p>
                   <p class="text-xs">MT Capacity</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">100%</p>
                   <p class="text-xs">Safe</p>
                 </div>
@@ -289,18 +277,17 @@
 
             <div class="order-1 lg:order-2">
               <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl">
-                <i class="pi pi-truck text-[#A85750] text-8xl opacity-20"></i>
-                <div class="mt-6 space-y-2">
+                <div class=" space-y-2">
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>5 Low Bed Trailers</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>52 Hydraulic Axles</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Expert Route Planning</span>
                   </div>
                 </div>
@@ -314,18 +301,17 @@
           <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl">
-                <i class="pi pi-circle text-[#A85750] text-8xl opacity-20"></i>
-                <div class="mt-6 space-y-2">
+                <div class=" space-y-2">
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>75 LPG Tankers</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>OMC Certified Drivers</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>24/7 Safety Monitoring</span>
                   </div>
                 </div>
@@ -333,13 +319,13 @@
             </div>
 
             <div>
-              <div class="inline-flex items-center gap-2 bg-[#A85750]/10 px-4 py-2 rounded-full mb-4">
-                <i class="pi pi-circle text-[#A85750]"></i>
-                <span class="text-[#A85750] font-bold text-xs uppercase tracking-wider">Energy Transport</span>
+              <div class="inline-flex items-center gap-2 bg-[#9F153E]/10 px-4 py-2 rounded-full mb-4">
+                <i class="pi pi-circle text-[#9F153E]"></i>
+                <span class="text-[#9F153E] font-bold text-xs uppercase tracking-wider">Energy Transport</span>
               </div>
               
               <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-                Bulk LPG <span class="text-[#A85750]">Transport</span>
+                Bulk LPG <span class="text-[#9F153E]">Transport</span>
               </h2>
               
               <p class="text-base text-gray-600 mb-6 leading-relaxed">
@@ -348,7 +334,7 @@
 
               <div class="space-y-3 mb-6">
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -358,7 +344,7 @@
                 </div>
 
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -369,15 +355,15 @@
               </div>
 
               <div class="grid grid-cols-3 gap-3">
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">75</p>
                   <p class="text-xs">Tankers</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">3</p>
                   <p class="text-xs">Major OMCs</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">24/7</p>
                   <p class="text-xs">Operations</p>
                 </div>
@@ -390,13 +376,13 @@
         <div :id="'service-bridge-girder'" ref="bridgeGirderRef" class="mb-24 scroll-mt-32">
           <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div class="order-2 lg:order-1">
-              <div class="inline-flex items-center gap-2 bg-[#A85750]/10 px-4 py-2 rounded-full mb-4">
-                <i class="pi pi-directions text-[#A85750]"></i>
-                <span class="text-[#A85750] font-bold text-xs uppercase tracking-wider">Infrastructure</span>
+              <div class="inline-flex items-center gap-2 bg-[#9F153E]/10 px-4 py-2 rounded-full mb-4">
+                <i class="pi pi-directions text-[#9F153E]"></i>
+                <span class="text-[#9F153E] font-bold text-xs uppercase tracking-wider">Infrastructure</span>
               </div>
               
               <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-                Bridge Girder & <span class="text-[#A85750]">Segments</span>
+                Bridge Girder & <span class="text-[#9F153E]">Segments</span>
               </h2>
               
               <p class="text-base text-gray-600 mb-6 leading-relaxed">
@@ -418,7 +404,7 @@
 
               <div class="space-y-3 mb-6">
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -428,7 +414,7 @@
                 </div>
 
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -439,15 +425,15 @@
               </div>
 
               <div class="grid grid-cols-3 gap-3">
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">5000+</p>
                   <p class="text-xs">Girders</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">125'</p>
                   <p class="text-xs">Max Length</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">150</p>
                   <p class="text-xs">MT Capacity</p>
                 </div>
@@ -456,18 +442,17 @@
 
             <div class="order-1 lg:order-2">
               <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl">
-                <i class="pi pi-directions text-[#A85750] text-8xl opacity-20"></i>
-                <div class="mt-6 space-y-2">
+                <div class=" space-y-2">
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>52 Hydraulic Axles</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>7 Pullers Available</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Pioneer Since 1974</span>
                   </div>
                 </div>
@@ -481,18 +466,17 @@
           <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl">
-                <i class="pi pi-box text-[#A85750] text-8xl opacity-20"></i>
-                <div class="mt-6 space-y-2">
+                <div class=" space-y-2">
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>TEU & FEU Handling</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Port Infrastructure</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Since 1974</span>
                   </div>
                 </div>
@@ -500,13 +484,13 @@
             </div>
 
             <div>
-              <div class="inline-flex items-center gap-2 bg-[#A85750]/10 px-4 py-2 rounded-full mb-4">
-                <i class="pi pi-box text-[#A85750]"></i>
-                <span class="text-[#A85750] font-bold text-xs uppercase tracking-wider">Port Operations</span>
+              <div class="inline-flex items-center gap-2 bg-[#9F153E]/10 px-4 py-2 rounded-full mb-4">
+                <i class="pi pi-box text-[#9F153E]"></i>
+                <span class="text-[#9F153E] font-bold text-xs uppercase tracking-wider">Port Operations</span>
               </div>
               
               <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-                Container & Port <span class="text-[#A85750]">Services</span>
+                Container & Port <span class="text-[#9F153E]">Services</span>
               </h2>
               
               <p class="text-base text-gray-600 mb-6 leading-relaxed">
@@ -515,7 +499,7 @@
 
               <div class="space-y-3 mb-6">
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -525,7 +509,7 @@
                 </div>
 
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -536,15 +520,15 @@
               </div>
 
               <div class="grid grid-cols-3 gap-3">
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">51+</p>
                   <p class="text-xs">Years</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">100+</p>
                   <p class="text-xs">Daily</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">24/7</p>
                   <p class="text-xs">Access</p>
                 </div>
@@ -557,13 +541,13 @@
         <div :id="'service-crane'" ref="craneRef" class="mb-24 scroll-mt-32">
           <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div class="order-2 lg:order-1">
-              <div class="inline-flex items-center gap-2 bg-[#A85750]/10 px-4 py-2 rounded-full mb-4">
-                <i class="pi pi-wrench text-[#A85750]"></i>
-                <span class="text-[#A85750] font-bold text-xs uppercase tracking-wider">Lifting Solutions</span>
+              <div class="inline-flex items-center gap-2 bg-[#9F153E]/10 px-4 py-2 rounded-full mb-4">
+                <i class="pi pi-wrench text-[#9F153E]"></i>
+                <span class="text-[#9F153E] font-bold text-xs uppercase tracking-wider">Lifting Solutions</span>
               </div>
               
               <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-                Crane Services & <span class="text-[#A85750]">Telehandlers</span>
+                Crane Services & <span class="text-[#9F153E]">Telehandlers</span>
               </h2>
               
               <p class="text-base text-gray-600 mb-6 leading-relaxed">
@@ -572,7 +556,7 @@
 
               <div class="space-y-3 mb-6">
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -582,7 +566,7 @@
                 </div>
 
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -592,7 +576,7 @@
                 </div>
 
                 <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <div class="w-10 h-10 bg-[#A85750] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-[#9F153E] rounded-lg flex items-center justify-center flex-shrink-0">
                     <i class="pi pi-check text-white"></i>
                   </div>
                   <div>
@@ -603,15 +587,15 @@
               </div>
 
               <div class="grid grid-cols-3 gap-3">
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">7</p>
                   <p class="text-xs">Cranes</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">500</p>
                   <p class="text-xs">MT Capacity</p>
                 </div>
-                <div class="text-center p-3 bg-[#A85750] rounded-xl text-white">
+                <div class="text-center p-3 bg-[#9F153E] rounded-xl text-white">
                   <p class="text-2xl font-black mb-1">24/7</p>
                   <p class="text-xs">Available</p>
                 </div>
@@ -620,18 +604,17 @@
 
             <div class="order-1 lg:order-2">
               <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl">
-                <i class="pi pi-wrench text-[#A85750] text-8xl opacity-20"></i>
-                <div class="mt-6 space-y-2">
+                <div class=" space-y-2">
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Crawler Cranes</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>Certified Operators</span>
                   </div>
                   <div class="flex items-center gap-2 text-white text-sm">
-                    <i class="pi pi-check text-[#A85750]"></i>
+                    <i class="pi pi-check text-[#9F153E]"></i>
                     <span>On-site Support</span>
                   </div>
                 </div>
@@ -643,38 +626,6 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-16 bg-gradient-to-br from-[#A85750] to-[#8f4740]">
-      <div class="container mx-auto px-6">
-        <div class="max-w-3xl mx-auto text-center text-white">
-          <h2 class="text-3xl md:text-4xl font-black mb-4">
-            Need Specialized Logistics?
-          </h2>
-          
-          <p class="text-lg mb-8">
-            51 years of expertise. Let's move your business forward.
-          </p>
-          
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" 
-               class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl
-                      bg-white text-[#A85750] font-bold
-                      transform hover:scale-105 transition-all duration-300 shadow-xl">
-              <span>Get in Touch</span>
-              <i class="pi pi-arrow-right"></i>
-            </a>
-            
-            <a href="#quote" 
-               class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl
-                      border-2 border-white/30 backdrop-blur-xl font-bold
-                      hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
-              <i class="pi pi-file-edit"></i>
-              <span>Request Quote</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 

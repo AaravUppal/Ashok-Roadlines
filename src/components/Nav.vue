@@ -1,6 +1,6 @@
 <template>
   <nav class="fixed w-full top-0 z-50 transition-all duration-300" :class="[
-    scrolled ? 'bg-white/95 backdrop-blur-lg shadow-xl' : 'bg-white/90 backdrop-blur-md shadow-lg'
+    scrolled ? 'bg-white backdrop-blur-lg shadow-xl' : 'bg-white backdrop-blur-md shadow-lg'
   ]">
     <div class="container mx-auto px-4 lg:px-8">
       <div class="flex items-center justify-between h-20">
@@ -11,37 +11,33 @@
         >
           <div class="relative">
             <!-- Glow Effect -->
-            <div class="absolute inset-0 bg-gradient-to-r from-[#A85750] to-[#c96860] rounded-xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
             <img 
               src="/assets/logo.png" 
               alt="Ashok Roadlines" 
-              class="h-14 w-auto relative z-10 drop-shadow-2xl transition-transform duration-300 group-hover:rotate-3"
+              class="h-14 w-auto relative z-10 drop-shadow-2xl transition-transform duration-300 "
             />
           </div>
-          <div class="hidden md:flex flex-col">
-            <span class="text-xl font-black text-gray-900 tracking-tight">ASHOK ROADLINES</span>
-            <span class="text-xs font-medium text-[#A85750] tracking-wider">SINCE 1974</span>
-          </div>
+          
         </router-link>
 
         <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center space-x-1">
           <router-link 
             to="/" 
-            class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#A85750] transition-all duration-300 group"
-            active-class="text-[#A85750]"
+            class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#9F153E] transition-all duration-300 group"
+            active-class="text-[#9F153E]"
           >
             <span class="relative z-10">Home</span>
-            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#A85750] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#9F153E] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
           </router-link>
           
           <router-link 
             to="/about" 
-            class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#A85750] transition-all duration-300 group"
-            active-class="text-[#A85750]"
+            class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#9F153E] transition-all duration-300 group"
+            active-class="text-[#9F153E]"
           >
             <span class="relative z-10">About</span>
-            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#A85750] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#9F153E] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
           </router-link>
           
           <!-- Equipment Mega Menu -->
@@ -51,15 +47,15 @@
             @mouseleave="handleEquipmentLeave"
           >
             <button
-              class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#A85750] transition-all duration-300 flex items-center gap-2 group"
-              :class="{ 'text-[#A85750]': showEquipmentMenu || $route.path.includes('/equipment') }"
+              class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#9F153E] transition-all duration-300 flex items-center gap-2 group"
+              :class="{ 'text-[#9F153E]': showEquipmentMenu || $route.path.includes('/equipment') }"
             >
               <span class="relative z-10">Equipment</span>
               <i 
                 class="pi pi-chevron-down text-xs transition-all duration-300"
                 :class="{ 'rotate-180': showEquipmentMenu }"
               ></i>
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#A85750] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#9F153E] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
             </button>
             
             <!-- Equipment Dropdown -->
@@ -79,11 +75,11 @@
                       <router-link
                         to="/equipment/trailers"
                         class="flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 text-gray-700 font-semibold text-sm group/link"
-                        :class="activeEquipment === 'trailers' || $route.path.includes('/equipment/trailers') ? 'bg-gradient-to-r from-[#A85750]/10 to-[#c96860]/10 text-[#A85750]' : 'hover:bg-gray-50'"
+                        :class="activeEquipment === 'trailers' || $route.path.includes('/equipment/trailers') ? 'bg-gradient-to-r from-[#9F153E]/10 to-[#c96860]/10 text-[#9F153E]' : 'hover:bg-gray-50'"
                       >
                         <div class="flex items-center gap-3">
-                          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
-                            <i class="pi pi-truck text-[#A85750] text-sm"></i>
+                          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#9F153E]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
+                            <i class="pi pi-truck text-[#9F153E] text-sm"></i>
                           </div>
                           <span>Trailers</span>
                         </div>
@@ -99,30 +95,30 @@
                           <div class="p-3 space-y-1">
                             <router-link 
                               to="/equipment/trailers/flatbed" 
-                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#A85750] font-medium group/sub"
+                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#9F153E] font-medium group/sub"
                             >
-                              <div class="w-1.5 h-1.5 rounded-full bg-[#A85750] group-hover/sub:scale-150 transition-transform"></div>
+                              <div class="w-1.5 h-1.5 rounded-full bg-[#9F153E] group-hover/sub:scale-150 transition-transform"></div>
                               Flatbed Trailer
                             </router-link>
                             <router-link 
                               to="/equipment/trailers/semi-lowbed" 
-                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#A85750] font-medium group/sub"
+                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#9F153E] font-medium group/sub"
                             >
-                              <div class="w-1.5 h-1.5 rounded-full bg-[#A85750] group-hover/sub:scale-150 transition-transform"></div>
+                              <div class="w-1.5 h-1.5 rounded-full bg-[#9F153E] group-hover/sub:scale-150 transition-transform"></div>
                               Semi Lowbed Trailer
                             </router-link>
                             <router-link 
                               to="/equipment/trailers/lowbed" 
-                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#A85750] font-medium group/sub"
+                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#9F153E] font-medium group/sub"
                             >
-                              <div class="w-1.5 h-1.5 rounded-full bg-[#A85750] group-hover/sub:scale-150 transition-transform"></div>
+                              <div class="w-1.5 h-1.5 rounded-full bg-[#9F153E] group-hover/sub:scale-150 transition-transform"></div>
                               Lowbed Trailer
                             </router-link>
                             <router-link 
                               to="/equipment/trailers/lowbed-16-wheeler" 
-                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#A85750] font-medium group/sub"
+                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#9F153E] font-medium group/sub"
                             >
-                              <div class="w-1.5 h-1.5 rounded-full bg-[#A85750] group-hover/sub:scale-150 transition-transform"></div>
+                              <div class="w-1.5 h-1.5 rounded-full bg-[#9F153E] group-hover/sub:scale-150 transition-transform"></div>
                               Lowbed 16 Wheeler
                             </router-link>
                           </div>
@@ -133,11 +129,11 @@
                     <!-- Hydraulic Axles -->
                     <router-link 
                       to="/equipment/hydraulic-axles"
-                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#9F153E] font-semibold text-sm group/link"
                       @mouseenter="activeEquipment = null"
                     >
-                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
-                        <i class="pi pi-cog text-[#A85750] text-sm"></i>
+                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#9F153E]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
+                        <i class="pi pi-cog text-[#9F153E] text-sm"></i>
                       </div>
                       <span>Hydraulic Axles</span>
                     </router-link>
@@ -145,11 +141,11 @@
                     <!-- Pullers -->
                     <router-link 
                       to="/equipment/pullers"
-                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#9F153E] font-semibold text-sm group/link"
                       @mouseenter="activeEquipment = null"
                     >
-                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
-                        <i class="pi pi-arrows-h text-[#A85750] text-sm"></i>
+                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#9F153E]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
+                        <i class="pi pi-arrows-h text-[#9F153E] text-sm"></i>
                       </div>
                       <span>Pullers</span>
                     </router-link>
@@ -163,11 +159,11 @@
                       <router-link
                         to="/equipment/crane"
                         class="flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 text-gray-700 font-semibold text-sm group/link"
-                        :class="activeEquipment === 'crane' || $route.path.includes('/equipment/crane') ? 'bg-gradient-to-r from-[#A85750]/10 to-[#c96860]/10 text-[#A85750]' : 'hover:bg-gray-50'"
+                        :class="activeEquipment === 'crane' || $route.path.includes('/equipment/crane') ? 'bg-gradient-to-r from-[#9F153E]/10 to-[#c96860]/10 text-[#9F153E]' : 'hover:bg-gray-50'"
                       >
                         <div class="flex items-center gap-3">
-                          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
-                            <i class="pi pi-sitemap text-[#A85750] text-sm"></i>
+                          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#9F153E]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
+                            <i class="pi pi-sitemap text-[#9F153E] text-sm"></i>
                           </div>
                           <span>Crane</span>
                         </div>
@@ -183,16 +179,16 @@
                           <div class="p-3 space-y-1">
                             <router-link 
                               to="/equipment/crane/crawler" 
-                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#A85750] font-medium group/sub"
+                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#9F153E] font-medium group/sub"
                             >
-                              <div class="w-1.5 h-1.5 rounded-full bg-[#A85750] group-hover/sub:scale-150 transition-transform"></div>
+                              <div class="w-1.5 h-1.5 rounded-full bg-[#9F153E] group-hover/sub:scale-150 transition-transform"></div>
                               Crawler Crane
                             </router-link>
                             <router-link 
                               to="/equipment/crane/tire-mount" 
-                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#A85750] font-medium group/sub"
+                              class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-sm text-gray-700 hover:text-[#9F153E] font-medium group/sub"
                             >
-                              <div class="w-1.5 h-1.5 rounded-full bg-[#A85750] group-hover/sub:scale-150 transition-transform"></div>
+                              <div class="w-1.5 h-1.5 rounded-full bg-[#9F153E] group-hover/sub:scale-150 transition-transform"></div>
                               Tire Mount Crane
                             </router-link>
                           </div>
@@ -203,11 +199,11 @@
                     <!-- Pick and Carry -->
                     <router-link 
                       to="/equipment/pick-and-carry"
-                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#9F153E] font-semibold text-sm group/link"
                       @mouseenter="activeEquipment = null"
                     >
-                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
-                        <i class="pi pi-box text-[#A85750] text-sm"></i>
+                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#9F153E]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
+                        <i class="pi pi-box text-[#9F153E] text-sm"></i>
                       </div>
                       <span>Pick and Carry</span>
                     </router-link>
@@ -215,11 +211,11 @@
                     <!-- Telehandler -->
                     <router-link 
                       to="/equipment/telehandler"
-                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#9F153E] font-semibold text-sm group/link"
                       @mouseenter="activeEquipment = null"
                     >
-                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
-                        <i class="pi pi-forward text-[#A85750] text-sm"></i>
+                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#9F153E]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
+                        <i class="pi pi-forward text-[#9F153E] text-sm"></i>
                       </div>
                       <span>Telehandler</span>
                     </router-link>
@@ -227,11 +223,11 @@
                     <!-- Boom Placer -->
                     <router-link 
                       to="/equipment/boom-placer"
-                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#9F153E] font-semibold text-sm group/link"
                       @mouseenter="activeEquipment = null"
                     >
-                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
-                        <i class="pi pi-th-large text-[#A85750] text-sm"></i>
+                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#9F153E]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
+                        <i class="pi pi-th-large text-[#9F153E] text-sm"></i>
                       </div>
                       <span>Boom Placer</span>
                     </router-link>
@@ -239,11 +235,11 @@
                     <!-- LPG Tanker -->
                     <router-link 
                       to="/equipment/lpg-tanker"
-                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#9F153E] font-semibold text-sm group/link"
                       @mouseenter="activeEquipment = null"
                     >
-                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
-                        <i class="pi pi-circle text-[#A85750] text-sm"></i>
+                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#9F153E]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
+                        <i class="pi pi-circle text-[#9F153E] text-sm"></i>
                       </div>
                       <span>LPG Tanker</span>
                     </router-link>
@@ -251,11 +247,11 @@
                     <!-- Ammonia Tanker -->
                     <router-link 
                       to="/equipment/ammonia-tanker"
-                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#A85750]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#A85750] font-semibold text-sm group/link"
+                      class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#9F153E]/10 hover:to-[#c96860]/10 transition-all duration-300 text-gray-700 hover:text-[#9F153E] font-semibold text-sm group/link"
                       @mouseenter="activeEquipment = null"
                     >
-                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A85750]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
-                        <i class="pi pi-database text-[#A85750] text-sm"></i>
+                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#9F153E]/20 to-[#c96860]/20 flex items-center justify-center group-hover/link:scale-110 transition-transform">
+                        <i class="pi pi-database text-[#9F153E] text-sm"></i>
                       </div>
                       <span>Ammonia Tanker</span>
                     </router-link>
@@ -267,26 +263,26 @@
           
           <router-link 
             to="/services" 
-            class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#A85750] transition-all duration-300 group"
-            active-class="text-[#A85750]"
+            class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#9F153E] transition-all duration-300 group"
+            active-class="text-[#9F153E]"
           >
             <span class="relative z-10">Services</span>
-            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#A85750] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#9F153E] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
           </router-link>
           
-          <router-link 
+          <!-- <router-link 
             to="/gallery" 
-            class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#A85750] transition-all duration-300 group"
-            active-class="text-[#A85750]"
+            class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#9F153E] transition-all duration-300 group"
+            active-class="text-[#9F153E]"
           >
             <span class="relative z-10">Gallery</span>
-            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#A85750] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
-          </router-link>
+            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#9F153E] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+          </router-link> -->
           
           <!-- Contact Us - Enhanced Button -->
           <router-link 
             to="/contact" 
-            class="relative ml-3 px-6 py-3 bg-gradient-to-r from-[#A85750] via-[#c96860] to-[#A85750] bg-size-200 text-white font-black text-sm uppercase tracking-wider rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2.5 group overflow-hidden"
+            class="relative ml-3 px-6 py-3 bg-gradient-to-r from-[#9F153E] via-[#c96860] to-[#9F153E] bg-size-200 text-white font-black text-sm uppercase tracking-wider rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2.5 group overflow-hidden"
           >
             <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 group-hover:animate-shimmer-fast"></span>
             <div class="relative z-10 flex items-center gap-2.5">
@@ -299,7 +295,7 @@
         <!-- Mobile Menu Button -->
         <button 
           @click="toggleMenu"
-          class="p-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-[#A85750] hover:to-[#c96860] rounded-xl transition-all duration-300 lg:hidden border-2 border-gray-200 hover:border-[#A85750] shadow-md hover:shadow-xl"
+          class="p-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-[#9F153E] hover:to-[#c96860] rounded-xl transition-all duration-300 lg:hidden border-2 border-gray-200 hover:border-[#9F153E] shadow-md hover:shadow-xl"
           aria-label="Toggle menu"
         >
           <i 
@@ -320,8 +316,8 @@
             <router-link 
               to="/" 
               @click="closeMobileMenu"
-              class="flex items-center gap-3 px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-[#A85750] hover:to-[#c96860] rounded-xl transition-all duration-300 border-2 border-transparent hover:border-[#A85750] group"
-              :class="{ 'text-white bg-gradient-to-r from-[#A85750] to-[#c96860] border-[#A85750]': $route.path === '/' }"
+              class="flex items-center gap-3 px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-[#9F153E] hover:to-[#c96860] rounded-xl transition-all duration-300 border-2 border-transparent hover:border-[#9F153E] group"
+              :class="{ 'text-white bg-gradient-to-r from-[#9F153E] to-[#c96860] border-[#9F153E]': $route.path === '/' }"
             >
               <i class="pi pi-home text-base group-hover:scale-110 transition-transform"></i>
               Home
@@ -330,8 +326,8 @@
             <router-link 
               to="/about" 
               @click="closeMobileMenu"
-              class="flex items-center gap-3 px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-[#A85750] hover:to-[#c96860] rounded-xl transition-all duration-300 border-2 border-transparent hover:border-[#A85750] group"
-              :class="{ 'text-white bg-gradient-to-r from-[#A85750] to-[#c96860] border-[#A85750]': $route.path === '/about' }"
+              class="flex items-center gap-3 px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-[#9F153E] hover:to-[#c96860] rounded-xl transition-all duration-300 border-2 border-transparent hover:border-[#9F153E] group"
+              :class="{ 'text-white bg-gradient-to-r from-[#9F153E] to-[#c96860] border-[#9F153E]': $route.path === '/about' }"
             >
               <i class="pi pi-info-circle text-base group-hover:scale-110 transition-transform"></i>
               About Us
@@ -341,7 +337,7 @@
             <div class="border-2 border-gray-200 rounded-xl overflow-hidden bg-gray-50">
               <button
                 @click="mobileEquipmentOpen = !mobileEquipmentOpen"
-                class="flex items-center justify-between w-full px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-[#A85750] hover:bg-white transition-all duration-300"
+                class="flex items-center justify-between w-full px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-[#9F153E] hover:bg-white transition-all duration-300"
               >
                 <div class="flex items-center gap-3">
                   <i class="pi pi-wrench text-base"></i>
@@ -359,7 +355,7 @@
                   <div class="border-t-2 border-gray-100">
                     <button
                       @click="mobileTrailersOpen = !mobileTrailersOpen"
-                      class="flex items-center justify-between w-full px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#A85750] hover:bg-gray-50 transition-all duration-300"
+                      class="flex items-center justify-between w-full px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#9F153E] hover:bg-gray-50 transition-all duration-300"
                     >
                       <span>Trailers</span>
                       <i 
@@ -373,28 +369,28 @@
                         <router-link 
                           to="/equipment/trailers/flatbed" 
                           @click="closeMobileMenu"
-                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#A85750] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#A85750]"
+                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#9F153E] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#9F153E]"
                         >
                           Flatbed Trailer
                         </router-link>
                         <router-link 
                           to="/equipment/trailers/semi-lowbed" 
                           @click="closeMobileMenu"
-                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#A85750] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#A85750]"
+                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#9F153E] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#9F153E]"
                         >
                           Semi Lowbed
                         </router-link>
                         <router-link 
                           to="/equipment/trailers/lowbed" 
                           @click="closeMobileMenu"
-                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#A85750] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#A85750]"
+                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#9F153E] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#9F153E]"
                         >
                           Lowbed Trailer
                         </router-link>
                         <router-link 
                           to="/equipment/trailers/lowbed-16-wheeler" 
                           @click="closeMobileMenu"
-                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#A85750] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#A85750]"
+                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#9F153E] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#9F153E]"
                         >
                           Lowbed 16 Wheeler
                         </router-link>
@@ -407,7 +403,7 @@
                     <router-link 
                       to="/equipment/hydraulic-axles"
                       @click="closeMobileMenu"
-                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#A85750] hover:bg-gray-50 transition-all duration-300"
+                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#9F153E] hover:bg-gray-50 transition-all duration-300"
                     >
                       Hydraulic Axles
                     </router-link>
@@ -417,7 +413,7 @@
                     <router-link 
                       to="/equipment/pullers"
                       @click="closeMobileMenu"
-                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#A85750] hover:bg-gray-50 transition-all duration-300"
+                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#9F153E] hover:bg-gray-50 transition-all duration-300"
                     >
                       Pullers
                     </router-link>
@@ -427,7 +423,7 @@
                   <div class="border-t-2 border-gray-100">
                     <button
                       @click="mobileCraneOpen = !mobileCraneOpen"
-                      class="flex items-center justify-between w-full px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#A85750] hover:bg-gray-50 transition-all duration-300"
+                      class="flex items-center justify-between w-full px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#9F153E] hover:bg-gray-50 transition-all duration-300"
                     >
                       <span>Crane</span>
                       <i 
@@ -441,14 +437,14 @@
                         <router-link 
                           to="/equipment/crane/crawler" 
                           @click="closeMobileMenu"
-                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#A85750] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#A85750]"
+                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#9F153E] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#9F153E]"
                         >
                           Crawler Crane
                         </router-link>
                         <router-link 
                           to="/equipment/crane/tire-mount" 
                           @click="closeMobileMenu"
-                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#A85750] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#A85750]"
+                          class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#9F153E] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#9F153E]"
                         >
                           Tire Mount Crane
                         </router-link>
@@ -461,7 +457,7 @@
                     <router-link 
                       to="/equipment/pick-and-carry"
                       @click="closeMobileMenu"
-                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#A85750] hover:bg-gray-50 transition-all duration-300"
+                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#9F153E] hover:bg-gray-50 transition-all duration-300"
                     >
                       Pick and Carry
                     </router-link>
@@ -471,7 +467,7 @@
                     <router-link 
                       to="/equipment/telehandler"
                       @click="closeMobileMenu"
-                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#A85750] hover:bg-gray-50 transition-all duration-300"
+                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#9F153E] hover:bg-gray-50 transition-all duration-300"
                     >
                       Telehandler
                     </router-link>
@@ -481,7 +477,7 @@
                     <router-link 
                       to="/equipment/boom-placer"
                       @click="closeMobileMenu"
-                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#A85750] hover:bg-gray-50 transition-all duration-300"
+                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#9F153E] hover:bg-gray-50 transition-all duration-300"
                     >
                       Boom Placer
                     </router-link>
@@ -491,7 +487,7 @@
                     <router-link 
                       to="/equipment/lpg-tanker"
                       @click="closeMobileMenu"
-                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#A85750] hover:bg-gray-50 transition-all duration-300"
+                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#9F153E] hover:bg-gray-50 transition-all duration-300"
                     >
                       LPG Tanker
                     </router-link>
@@ -501,7 +497,7 @@
                     <router-link 
                       to="/equipment/ammonia-tanker"
                       @click="closeMobileMenu"
-                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#A85750] hover:bg-gray-50 transition-all duration-300"
+                      class="flex items-center px-6 py-3 text-gray-700 font-semibold text-sm hover:text-[#9F153E] hover:bg-gray-50 transition-all duration-300"
                     >
                       Ammonia Tanker
                     </router-link>
@@ -513,28 +509,28 @@
             <router-link 
               to="/services" 
               @click="closeMobileMenu"
-              class="flex items-center gap-3 px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-[#A85750] hover:to-[#c96860] rounded-xl transition-all duration-300 border-2 border-transparent hover:border-[#A85750] group"
-              :class="{ 'text-white bg-gradient-to-r from-[#A85750] to-[#c96860] border-[#A85750]': $route.path === '/services' }"
+              class="flex items-center gap-3 px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-[#9F153E] hover:to-[#c96860] rounded-xl transition-all duration-300 border-2 border-transparent hover:border-[#9F153E] group"
+              :class="{ 'text-white bg-gradient-to-r from-[#9F153E] to-[#c96860] border-[#9F153E]': $route.path === '/services' }"
             >
               <i class="pi pi-briefcase text-base group-hover:scale-110 transition-transform"></i>
               Services
             </router-link>
             
-            <router-link 
+            <!-- <router-link 
               to="/gallery" 
               @click="closeMobileMenu"
-              class="flex items-center gap-3 px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-[#A85750] hover:to-[#c96860] rounded-xl transition-all duration-300 border-2 border-transparent hover:border-[#A85750] group"
-              :class="{ 'text-white bg-gradient-to-r from-[#A85750] to-[#c96860] border-[#A85750]': $route.path === '/gallery' }"
+              class="flex items-center gap-3 px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-[#9F153E] hover:to-[#c96860] rounded-xl transition-all duration-300 border-2 border-transparent hover:border-[#9F153E] group"
+              :class="{ 'text-white bg-gradient-to-r from-[#9F153E] to-[#c96860] border-[#9F153E]': $route.path === '/gallery' }"
             >
               <i class="pi pi-images text-base group-hover:scale-110 transition-transform"></i>
               Gallery
-            </router-link>
+            </router-link> -->
             
             <!-- Mobile Contact Button -->
             <router-link 
               to="/contact" 
               @click="closeMobileMenu"
-              class="flex items-center justify-center gap-3 px-4 py-4 bg-gradient-to-r from-[#A85750] via-[#c96860] to-[#A85750] text-white font-black uppercase text-sm tracking-wider rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 mt-3 relative overflow-hidden group"
+              class="flex items-center justify-center gap-3 px-4 py-4 bg-gradient-to-r from-[#9F153E] via-[#c96860] to-[#9F153E] text-white font-black uppercase text-sm tracking-wider rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 mt-3 relative overflow-hidden group"
             >
               <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 group-hover:animate-shimmer-fast"></span>
               <i class="pi pi-phone text-base animate-pulse relative z-10"></i>
@@ -548,7 +544,7 @@
     <!-- Scroll Progress Bar -->
     <div class="absolute bottom-0 left-0 w-full h-1 bg-gray-100">
       <div 
-        class="h-full bg-gradient-to-r from-[#A85750] via-[#c96860] to-[#A85750] transition-all duration-150 ease-out shadow-lg relative overflow-hidden"
+        class="h-full bg-gradient-to-r from-[#9F153E] via-[#c96860] to-[#9F153E] transition-all duration-150 ease-out shadow-lg relative overflow-hidden"
         :style="{ width: scrollProgress + '%' }"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-50 animate-shimmer"></div>
@@ -734,11 +730,11 @@ onUnmounted(() => {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #A85750 0%, #c96860 100%);
+  background: linear-gradient(180deg, #9F153E 0%, #c96860 100%);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #c96860 0%, #A85750 100%);
+  background: linear-gradient(180deg, #c96860 0%, #9F153E 100%);
 }
 </style>

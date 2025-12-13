@@ -137,7 +137,7 @@
 .truck-body {
   width: 60px;
   height: 30px;
-  background: linear-gradient(135deg, #A85750 0%, #c96860 100%);
+  background: linear-gradient(135deg, #9F153E 0%, #c96860 100%);
   border-radius: 5px;
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -148,7 +148,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, #8f4740 0%, #A85750 100%);
+  background: linear-gradient(135deg, #8f4740 0%, #9F153E 100%);
   right: -15px;
   top: 0;
   border-radius: 0 5px 5px 0;
@@ -271,7 +271,7 @@
 .digit-inner {
   font-size: 10rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #fff 0%, #A85750 100%);
+  background: linear-gradient(135deg, #fff 0%, #9F153E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -342,7 +342,7 @@
   position: absolute;
   width: 3px;
   height: 50px;
-  background: #A85750;
+  background: #9F153E;
   top: -60px;
   left: 50%;
   transform: translateX(-50%);
@@ -353,7 +353,7 @@
   position: absolute;
   width: 20px;
   height: 15px;
-  border: 3px solid #A85750;
+  border: 3px solid #9F153E;
   border-top: none;
   border-radius: 0 0 10px 10px;
   top: -20px;
@@ -435,7 +435,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem 3rem;
-  background: linear-gradient(135deg, #A85750 0%, #c96860 100%);
+  background: linear-gradient(135deg, #9F153E 0%, #c96860 100%);
   color: white;
   text-decoration: none;
   font-size: 1.25rem;
@@ -554,7 +554,7 @@
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 50px solid #A85750;
+  border-bottom: 50px solid #9F153E;
   position: relative;
   animation: needle-wobble 3s infinite ease-in-out;
 }

@@ -12,7 +12,7 @@ const routes = [
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
   { path: '/about', component: About },
   { path: '/services', component: services },
-  { path: '/gallery', component: gallery },
+  // { path: '/gallery', component: gallery },
   { path: '/contact', component: contactlanding },
 ]
 
