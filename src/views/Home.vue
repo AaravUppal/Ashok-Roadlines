@@ -1,21 +1,12 @@
 <template>
-  <div class="min-h-screen bg-white overflow-x-hidden">
+  <div class="min-h-screen bg-white">
     <!-- Hero Section -->
     <div
       id="home"
       class="relative min-h-screen bg-black overflow-hidden"
-      @touchstart.passive="onTouchStart"
-      @touchmove.passive="onTouchMove"
-      @touchend.passive="onTouchEnd"
     >
-      <!-- Video Background -->
-      <div
-        class="fixed top-0 left-0 w-full h-screen z-0 pointer-events-none"
-        :style="{
-          transform: `translate3d(0, ${parallaxY}px, 0)`,
-          opacity: Math.max(0.5, 1 - scrollY * 0.001)
-        }"
-      >
+      <!-- Fixed Video/Image Background -->
+      <div class="fixed inset-0 w-full h-screen z-0 pointer-events-none">
         <transition-group name="hero-fade">
           <div
             v-for="(slide, index) in heroSlides"
@@ -284,7 +275,7 @@
       <!-- Industry Sectors -->
       <section
         ref="sectorsSection"
-        class="py-16 md:py-20 bg-gradient-to-t from-black to-gray-900"
+        class="py-16 md:py-20 bg-gradient-to-t from-black to-gray-900 relative"
       >
         <div class="container mx-auto px-6">
           <div class="text-center mb-10 md:mb-12 scroll-reveal">
@@ -383,7 +374,6 @@
               class="flex gap-4 overflow-x-auto py-4 px-1
                      scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent
                      snap-x snap-mandatory horizontal-scroll"
-              style="touch-action: pan-x pan-y;"
             >
               <div
                 v-for="(client, idx) in clients"
@@ -415,8 +405,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-const scrollY = ref(0)
-const parallaxY = ref(0)
 const scrollPaused = ref(false)
 
 const aboutSection = ref(null)
@@ -564,19 +552,6 @@ const clients = ref([
   { name: 'L&T', logo: '/assets/clients/lt.png' }
 ])
 
-let ticking = false
-const handleScroll = () => {
-  const y = window.scrollY || window.pageYOffset || 0
-  if (!ticking) {
-    ticking = true
-    window.requestAnimationFrame(() => {
-      scrollY.value = y
-      parallaxY.value = y * 0.4
-      ticking = false
-    })
-  }
-}
-
 const nextSlide = () => {
   currentSlide.value = (currentSlide.value + 1) % heroSlides.value.length
 }
@@ -604,60 +579,6 @@ const stopAutoSlide = () => {
   }
 }
 
-/* Touch swipe for hero */
-const touchStartX = ref(0)
-const touchStartY = ref(0)
-const touchEndX = ref(0)
-const isSwiping = ref(false)
-
-const onTouchStart = e => {
-  if (!e.touches || e.touches.length === 0) return
-  const touch = e.touches[0]
-  touchStartX.value = touch.clientX
-  touchStartY.value = touch.clientY
-  touchEndX.value = touch.clientX
-  isSwiping.value = false
-}
-
-const onTouchMove = e => {
-  if (!e.touches || e.touches.length === 0) return
-  const touch = e.touches[0]
-  const deltaX = touch.clientX - touchStartX.value
-  const deltaY = touch.clientY - touchStartY.value
-
-  if (!isSwiping.value && Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 40) {
-    isSwiping.value = true
-    stopAutoSlide()
-  }
-
-  if (isSwiping.value) {
-    touchEndX.value = touch.clientX
-  }
-}
-
-const onTouchEnd = () => {
-  if (!isSwiping.value) {
-    return
-  }
-
-  const diffX = touchEndX.value - touchStartX.value
-  const threshold = 60
-
-  if (Math.abs(diffX) > threshold) {
-    if (diffX < 0) {
-      nextSlide()
-    } else {
-      previousSlide()
-    }
-  }
-
-  isSwiping.value = false
-  touchStartX.value = 0
-  touchStartY.value = 0
-  touchEndX.value = 0
-  startAutoSlide()
-}
-
 /* Scroll reveal animations with Intersection Observer */
 let revealObserver = null
 
@@ -683,21 +604,14 @@ const setupScrollReveal = () => {
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll, { passive: true })
-  // let browser finish first paint and user’s first scroll frame
-  setTimeout(() => {
-    handleScroll()
-  }, 50)
-
   startAutoSlide()
 
   setTimeout(() => {
     setupScrollReveal()
-  }, 150)
+  }, 100)
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll)
   stopAutoSlide()
   if (revealObserver) {
     revealObserver.disconnect()
@@ -705,7 +619,6 @@ onBeforeUnmount(() => {
   }
 })
 </script>
-
 
 <style scoped>
 .marquee-content {
@@ -771,7 +684,6 @@ onBeforeUnmount(() => {
 }
 </style>
 
-<!-- global (not scoped) CSS can hold this class -->
 <style>
 .horizontal-scroll {
   -webkit-overflow-scrolling: touch;
