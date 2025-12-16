@@ -68,7 +68,7 @@
                           transform hover:scale-105 transition-all duration-300 shadow-xl text-sm sm:text-base"
                 >
                   <span>Learn More</span>
-                  <i class="pi pi-arrow-down"></i>
+                  <ArrowRightIcon class="w-5 h-5" />
                 </router-link>
 
                 <router-link
@@ -78,7 +78,7 @@
                           hover:bg-white/10 transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
                 >
                   <span>Contact Us</span>
-                  <i class="pi pi-phone"></i>
+                  <PhoneIcon class="w-5 h-5" />
                 </router-link>
               </div>
             </div>
@@ -98,7 +98,7 @@
                    flex items-center justify-center 
                    hover:bg-white/20 transition-all duration-300"
           >
-            <i class="pi pi-chevron-left text-white"></i>
+            <ChevronLeftIcon class="w-6 h-6 text-white" />
           </button>
 
           <button
@@ -108,7 +108,7 @@
                    flex items-center justify-center 
                    hover:bg-white/20 transition-all duration-300"
           >
-            <i class="pi pi-chevron-right text-white"></i>
+            <ChevronRightIcon class="w-6 h-6 text-white" />
           </button>
         </div>
       </div>
@@ -179,7 +179,7 @@
                             transition-transform duration-300 group-hover:scale-110 relative z-20"
                   :class="[index === 0 ? 'bg-[#9F153E]/20' : 'bg-[#9F153E]/20']"
                 >
-                  <i :class="[card.icon, 'text-xl', 'md:text-2xl', 'text-white']"></i>
+                  <component :is="card.icon" class="w-6 h-6 md:w-7 md:h-7 text-white" />
                 </div>
 
                 <h3
@@ -247,11 +247,11 @@
                             bg-[#9F153E]/10 group-hover:bg-white/20
                             transition-all duration-500 group-hover:scale-110 relative z-20"
                 >
-                  <i
-                    :class="service.icon"
-                    class="text-2xl md:text-3xl text-[#9F153E] group-hover:text-white 
+                  <component
+                    :is="service.icon"
+                    class="w-7 h-7 md:w-8 md:h-8 text-[#9F153E] group-hover:text-white 
                             transition-colors duration-500"
-                  ></i>
+                  />
                 </div>
 
                 <h3
@@ -302,11 +302,11 @@
                           transition-all duration-500 flex items-center justify-center
                           bg-white/5 group-hover:bg-[#9F153E] relative overflow-hidden"
               >
-                <i
-                  :class="sector.icon"
-                  class="text-2xl sm:text-3xl text-[#9F153E] group-hover:text-white 
+                <component
+                  :is="sector.icon"
+                  class="w-8 h-8 sm:w-10 sm:h-10 text-[#9F153E] group-hover:text-white 
                           transition-colors duration-500 relative z-20"
-                ></i>
+                />
               </div>
 
               <p
@@ -321,16 +321,16 @@
       </section>
 
       <!-- Clients Section -->
-      <section ref="clientsSection" class="py-12 bg-white scroll-reveal">
+      <section ref="clientsSection" class="py-12 bg-white  relative">
         <div class="container mx-auto px-6">
           <div class="text-center mb-6">
-            <span class="text-xs uppercase tracking-widest text-gray-500 font-bold">
+            <span class="text-xs uppercase tracking-widest text-gray-500 font-bold scroll-reveal">
               Our Partners
             </span>
           </div>
 
           <!-- Desktop / Tablet: marquee -->
-          <div class="relative max-w-full mx-auto hidden md:block">
+          <div class="relative max-w-full mx-auto hidden md:block scroll-reveal">
             <div
               class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"
             ></div>
@@ -369,7 +369,7 @@
           </div>
 
           <!-- Mobile: finger-scrollable row -->
-          <div class="md:hidden mt-2">
+          <div class="md:hidden mt-2 scroll-reveal">
             <div
               class="flex gap-4 overflow-x-auto py-4 px-1
                      scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent
@@ -405,12 +405,49 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
+/* ---------------- HEROICONS IMPORTS ---------------- */
+
+/* Solid icons (strong, industrial) */
+import {
+  TrophyIcon,
+  CubeIcon,
+  GlobeAltIcon,
+  CheckBadgeIcon,
+  TruckIcon,
+  UserGroupIcon,
+  BuildingOffice2Icon,
+  FireIcon,
+  CogIcon,
+  BoltIcon,
+  CircleStackIcon
+} from '@heroicons/vue/24/solid'
+
+/* Outline icons (technical / logistics) */
+import {
+  WrenchScrewdriverIcon,
+  ArrowsPointingOutIcon,
+  Squares2X2Icon,
+  CloudIcon,
+  ArchiveBoxIcon,
+  MapIcon,
+  AdjustmentsHorizontalIcon,
+  RectangleStackIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ArrowRightIcon,
+  PhoneIcon
+} from '@heroicons/vue/24/outline'
+
+/* ---------------- STATE ---------------- */
+
 const scrollPaused = ref(false)
 
 const aboutSection = ref(null)
 const servicesSection = ref(null)
 const sectorsSection = ref(null)
 const clientsSection = ref(null)
+
+/* ---------------- HERO SLIDER ---------------- */
 
 const currentSlide = ref(0)
 let slideInterval = null
@@ -453,91 +490,157 @@ const heroSlides = ref([
   }
 ])
 
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % heroSlides.value.length
+}
+
+const previousSlide = () => {
+  currentSlide.value =
+    (currentSlide.value - 1 + heroSlides.value.length) %
+    heroSlides.value.length
+}
+
+const goToSlide = index => {
+  currentSlide.value = index
+}
+
+const startAutoSlide = () => {
+  stopAutoSlide()
+  slideInterval = setInterval(nextSlide, 5000)
+}
+
+const stopAutoSlide = () => {
+  if (slideInterval) {
+    clearInterval(slideInterval)
+    slideInterval = null
+  }
+}
+
+/* ---------------- ABOUT ---------------- */
+
 const aboutCards = ref([
   {
-    icon: 'pi pi-star-fill',
+    icon: TrophyIcon,
     title: 'Pioneers Since 1974',
     description: 'First in Eastern India for girder & segment transportation'
   },
   {
-    icon: 'pi pi-th-large',
+    icon: CubeIcon,
     title: 'All-in-One Solution',
     description: 'Complete fleet from trailers to tankers under one roof'
   },
   {
-    icon: 'pi pi-map-marker',
+    icon: GlobeAltIcon,
     title: 'Pan-India Network',
     description: '9 strategic branches ensuring nationwide coverage'
   },
   {
-    icon: 'pi pi-check-circle',
+    icon: CheckBadgeIcon,
     title: '5000+ Girders Moved',
     description: 'Major infrastructure projects across India'
   },
   {
-    icon: 'pi pi-truck',
+    icon: TruckIcon,
     title: 'Massive Fleet',
     description: '225+ vehicles including 75 LPG tankers'
   },
   {
-    icon: 'pi pi-building',
+    icon: UserGroupIcon,
     title: 'Corporate Trusted',
     description: 'Serving 20+ major PSUs and enterprises'
   }
 ])
 
+/* ---------------- SERVICES (IMPROVED ICONS) ---------------- */
+
 const services = ref([
   {
-    icon: 'pi pi-shield',
+    icon: WrenchScrewdriverIcon,
     title: 'Heavy Equipment',
     description: 'Specialized transport for machinery and industrial equipment'
   },
   {
-    icon: 'pi pi-box',
+    icon: ArrowsPointingOutIcon,
     title: 'ODC Cargo',
     description: 'Over-dimensional cargo up to 150 MT capacity'
   },
   {
-    icon: 'pi pi-bolt',
+    icon: AdjustmentsHorizontalIcon,
+    title: 'OWC Cargo',
+    description: 'Odd-weight cargo for heavy and complex industrial loads'
+  },
+  {
+    icon: Squares2X2Icon,
     title: 'Girder Transport',
-    description: 'Expert handling of girders up to 125 feet'
+    description: 'Expert handling of bridge and flyover girders up to 125 feet'
   },
   {
-    icon: 'pi pi-car',
+    icon: TruckIcon,
     title: 'LPG Tankers',
-    description: '75+ tankers for safe petroleum transportation'
+    description: '75+ tankers for safe bulk LPG transportation'
   },
   {
-    icon: 'pi pi-building',
+    icon: CloudIcon,
+    title: 'Ammonia Gas Transport',
+    description: 'Secure transport of anhydrous ammonia gas'
+  },
+  {
+    icon: CogIcon,
     title: 'Steel Logistics',
-    description: 'Monthly transport of 20,000+ MT steel'
+    description: 'Monthly transport of 20,000+ MT finished steel products'
   },
   {
-    icon: 'pi pi-map',
+    icon: RectangleStackIcon,
+    title: 'Port & Container Transport',
+    description: 'TEU & FEU container movement and port-related logistics'
+  },
+  {
+    icon: ArchiveBoxIcon,
+    title: 'Industrial & Pipe Transport',
+    description: 'Transportation of pipes and industrial products'
+  },
+  {
+    icon: MapIcon,
     title: 'Project Cargo',
-    description: 'End-to-end logistics for mega projects'
+    description: 'End-to-end logistics for large infrastructure projects'
   },
   {
-    icon: 'pi pi-wrench',
+    icon: WrenchScrewdriverIcon,
     title: 'Crane Services',
-    description: 'Mobile cranes and lifting equipment'
+    description: 'Mobile cranes and heavy lifting equipment on rental'
   },
   {
-    icon: 'pi pi-globe',
-    title: 'All-India Permit',
-    description: 'Seamless nationwide transport'
+    icon: TruckIcon,
+    title: 'Trailer & Axle Rental',
+    description: 'Low-bed trailers and hydraulic axles for heavy cargo'
   }
 ])
 
+/* ---------------- SECTORS (STRONG & CLEAR) ---------------- */
+
 const sectors = ref([
-  { name: 'Power', icon: 'pi pi-bolt' },
-  { name: 'Steel', icon: 'pi pi-shield' },
-  { name: 'Petroleum', icon: 'pi pi-box' },
-  { name: 'Infrastructure', icon: 'pi pi-building' },
-  { name: 'Mining', icon: 'pi pi-compass' }
+  { name: 'Infrastructure', icon: BuildingOffice2Icon },
+  { name: 'Oil Marketing Companies', icon: FireIcon },
+  { name: 'Steel', icon: CogIcon },
+  { name: 'Power', icon: BoltIcon },
+  { name: 'Coal', icon: CircleStackIcon }
 ])
 
+/* ---------------- CLIENTS ---------------- */
+
 const clients = ref([
+  { name: 'HP', logo: '/assets/clients/hp.png' },
+  { name: 'SAIL', logo: '/assets/clients/sail.png' },
+  { name: 'MEIL', logo: '/assets/clients/meil.png' },
+  { name: 'Indian Oil', logo: '/assets/clients/Indianoil.png' },
+  { name: 'Coal India', logo: '/assets/clients/coalindia.png' },
+  { name: 'BHEL', logo: '/assets/clients/bhel.png' },
+  { name: 'Bharat Petroleum', logo: '/assets/clients/bharatpetrol.png' },
+  { name: 'Bekem', logo: '/assets/clients/bekem.png' },
+  { name: 'BBJ', logo: '/assets/clients/bbj.png' },
+  { name: 'B&R', logo: '/assets/clients/br.png' },
+  { name: 'Jindal', logo: '/assets/clients/jindal.png' },
+  { name: 'L&T', logo: '/assets/clients/lt.png' },
   { name: 'HP', logo: '/assets/clients/hp.png' },
   { name: 'SAIL', logo: '/assets/clients/sail.png' },
   { name: 'MEIL', logo: '/assets/clients/meil.png' },
@@ -552,71 +655,38 @@ const clients = ref([
   { name: 'L&T', logo: '/assets/clients/lt.png' }
 ])
 
-const nextSlide = () => {
-  currentSlide.value = (currentSlide.value + 1) % heroSlides.value.length
-}
+/* ---------------- SCROLL REVEAL ---------------- */
 
-const previousSlide = () => {
-  currentSlide.value =
-    (currentSlide.value - 1 + heroSlides.value.length) % heroSlides.value.length
-}
-
-const goToSlide = index => {
-  currentSlide.value = index
-}
-
-const startAutoSlide = () => {
-  stopAutoSlide()
-  slideInterval = setInterval(() => {
-    nextSlide()
-  }, 5000)
-}
-
-const stopAutoSlide = () => {
-  if (slideInterval) {
-    clearInterval(slideInterval)
-    slideInterval = null
-  }
-}
-
-/* Scroll reveal animations with Intersection Observer */
 let revealObserver = null
 
 const setupScrollReveal = () => {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  }
-
-  revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible')
-        if (revealObserver) {
-          revealObserver.unobserve(entry.target)
+  revealObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          revealObserver?.unobserve(entry.target)
         }
-      }
-    })
-  }, observerOptions)
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  )
 
-  const revealElements = document.querySelectorAll('.scroll-reveal')
-  revealElements.forEach(el => revealObserver.observe(el))
+  document
+    .querySelectorAll('.scroll-reveal')
+    .forEach(el => revealObserver.observe(el))
 }
+
+/* ---------------- LIFECYCLE ---------------- */
 
 onMounted(() => {
   startAutoSlide()
-
-  setTimeout(() => {
-    setupScrollReveal()
-  }, 100)
+  setTimeout(setupScrollReveal, 100)
 })
 
 onBeforeUnmount(() => {
   stopAutoSlide()
-  if (revealObserver) {
-    revealObserver.disconnect()
-    revealObserver = null
-  }
+  revealObserver?.disconnect()
 })
 </script>
 

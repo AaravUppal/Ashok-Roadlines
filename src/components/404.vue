@@ -73,7 +73,7 @@
       </router-link>
 
       <!-- Additional Info -->
-      <div class="info-box ml-8">
+      <div class="info-box">
         <div class="info-icon">📦</div>
         <p class="info-text">Don't worry! Our logistics team is on it.</p>
       </div>
@@ -99,13 +99,13 @@
 <style scoped>
 .error-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+  background: #111827;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 /* Animated Background */
@@ -250,6 +250,7 @@
   z-index: 10;
   text-align: center;
   max-width: 800px;
+  width: 100%;
 }
 
 /* Animated 404 */
@@ -499,6 +500,7 @@
   align-items: center;
   gap: 1rem;
   animation: info-box-float 3s infinite ease-in-out;
+  max-width: 90%;
 }
 
 @keyframes info-box-float {
@@ -509,6 +511,7 @@
 .info-icon {
   font-size: 2rem;
   animation: rotate-slow 10s infinite linear;
+  flex-shrink: 0;
 }
 
 @keyframes rotate-slow {
@@ -609,30 +612,54 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .error-page {
+    padding: 1rem;
+  }
+
   .error-code {
-    gap: 1rem;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
   }
   
   .digit {
-    width: 100px;
-    height: 150px;
+    width: 80px;
+    height: 120px;
   }
   
   .digit-inner {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   
   .error-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   .error-description {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
   
   .home-button {
     padding: 1rem 2rem;
     font-size: 1rem;
+  }
+
+  .button-icon {
+    font-size: 1.25rem;
+  }
+
+  .info-box {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-text {
+    font-size: 0.9rem;
   }
   
   .compass {
@@ -641,29 +668,100 @@
     width: 60px;
     height: 60px;
   }
+
+  .compass-needle {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 35px solid #9F153E;
+  }
   
   .truck {
-    width: 60px;
-    height: 30px;
+    width: 50px;
+    height: 25px;
+  }
+
+  .truck-body {
+    width: 40px;
+    height: 20px;
+  }
+
+  .truck-body::before {
+    width: 15px;
+    height: 15px;
+  }
+
+  .truck-wheels {
+    gap: 20px;
+    left: 5px;
+  }
+
+  .wheel {
+    width: 8px;
+    height: 8px;
+  }
+
+  .box {
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media (max-width: 480px) {
+  .digit {
+    width: 60px;
+    height: 90px;
+  }
+
   .digit-inner {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   
   .error-title {
     font-size: 1.5rem;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
   
   .error-description {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .home-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .button-icon {
+    font-size: 1.1rem;
+  }
+
+  .info-box {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .info-icon {
+    font-size: 1.5rem;
+  }
+
+  .info-text {
+    font-size: 0.85rem;
   }
   
   .compass {
     display: none;
+  }
+
+  .crane-line {
+    height: 30px;
+    top: -40px;
+  }
+
+  .crane-hook {
+    width: 15px;
+    height: 12px;
+    top: -15px;
   }
 }
 </style>

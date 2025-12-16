@@ -20,30 +20,20 @@
               <h3 class="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Ashok Roadlines
               </h3>
-              <p class="text-[#9F153E] text-sm font-bold tracking-widest">LOGISTICS</p>
             </div>
           </div>
           <p class="text-gray-300 text-sm leading-relaxed font-medium">
+            LOGISTICS 
             Through Innovation, Dedication & Technology
           </p>
           <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-700/50">
-            <p class="text-xs text-[#9F153E] font-semibold mb-1">Est. 1974</p>
+            <p class="text-xs text-[#9F153E] font-semibold mb-1">Since 1974</p>
             <p class="text-xs text-gray-400">Eastern India's Most Diversified Transport Group</p>
           </div>
           <div class="pt-2">
-            <p class="text-gray-500 text-xs mb-3 uppercase tracking-wider">Connect with us</p>
             <div class="flex gap-3">
-              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-[#9F153E] hover:to-[#8a4640] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg">
-                <i class="pi pi-facebook"></i>
-              </a>
-              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-[#9F153E] hover:to-[#8a4640] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg">
+              <a href="https://www.linkedin.com/company/ashok-roadlines/" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-[#9F153E] hover:to-[#8a4640] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg">
                 <i class="pi pi-linkedin"></i>
-              </a>
-              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-[#9F153E] hover:to-[#8a4640] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg">
-                <i class="pi pi-twitter"></i>
-              </a>
-              <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-[#9F153E] hover:to-[#8a4640] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg">
-                <i class="pi pi-instagram"></i>
               </a>
             </div>
           </div>
@@ -80,18 +70,6 @@
                 <span class="group-hover:tracking-wide transition-all duration-300">Contact</span>
               </router-link>
             </li>
-            <li>
-              <a href="#" class="text-gray-400 hover:text-[#9F153E] transition-all duration-300 flex items-center group">
-                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
-                <span class="group-hover:tracking-wide transition-all duration-300">Track Shipment</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-400 hover:text-[#9F153E] transition-all duration-300 flex items-center group">
-                <i class="pi pi-angle-right text-sm mr-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
-                <span class="group-hover:tracking-wide transition-all duration-300">Fleet Strength</span>
-              </a>
-            </li>
           </ul>
         </div>
 
@@ -110,69 +88,80 @@
         </div>
 
         <!-- Contact Info & Rental -->
-        <div class="space-y-6">
-          <div>
-            <h4 class="text-xl font-bold mb-6 text-white relative inline-block pb-2">
-              Get In Touch
-              <span class="absolute bottom-0 left-0 w-16 h-1 bg-gradient-to-r from-[#9F153E] to-transparent rounded-full"></span>
-            </h4>
-            <ul class="space-y-4">
-              <!-- Corporate Office -->
-              <li class="flex items-start gap-3 group cursor-pointer">
-                <div class="mt-1 p-2 bg-gray-800/70 rounded-lg group-hover:bg-[#9F153E] transition-all duration-300 shadow-lg">
-                  <i class="pi pi-map-marker text-lg"></i>
-                </div>
-                <div class="flex-1">
-                  <p class="text-xs text-gray-500 mb-0.5">Corporate Office</p>
-                  <span class="text-gray-300 text-sm leading-relaxed">79, Sambhunath Pandit Street, Kolkata-700 020</span>
-                </div>
-              </li>
-              
-              <!-- Email -->
-              <li class="flex items-start gap-3 group cursor-pointer">
-                <div class="mt-0.5 p-2 bg-gray-800/70 rounded-lg group-hover:bg-[#9F153E] transition-all duration-300 shadow-lg">
-                  <i class="pi pi-envelope text-lg"></i>
-                </div>
-                <div class="flex-1">
-                  <a href="mailto:mkp@ashokroadlines.com" class="text-gray-300 text-sm hover:text-[#9F153E] transition-colors block">
-                    mkp@ashokroadlines.com
-                  </a>
-                  <a href="mailto:sundeep@ashokroadlines.com" class="text-gray-400 text-xs hover:text-[#9F153E] transition-colors block">
-                    sundeep@ashokroadlines.com
-                  </a>
-                </div>
-              </li>
+        <div class="space-y-8">
+  <div>
+    <h4 class="text-xl font-semibold text-white relative inline-block pb-2 mb-8">
+      Get In Touch
+      <span class="absolute bottom-0 left-0 w-14 h-0.5 bg-gradient-to-r from-[#9F153E] to-transparent rounded-full"></span>
+    </h4>
 
-              <!-- 24/7 Support Badge -->
-              <li class="flex items-center gap-3">
-                <div class="p-2 bg-gradient-to-br from-[#9F153E] to-[#8a4640] rounded-lg shadow-xl">
-                  <i class="pi pi-clock text-lg"></i>
-                </div>
-                <div>
-                  <span class="text-white text-sm font-bold block">24/7 Support</span>
-                  <span class="text-gray-400 text-xs">All India Operations</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          
+    <ul class="space-y-5">
+      <!-- Corporate Office -->
+      <li class="flex gap-4 p-4 rounded-xl bg-gray-900/50 hover:bg-gray-900/70 transition-all">
 
-          <!-- Fleet Stats -->
-          <div class="grid grid-cols-3 gap-2 text-center">
-            <div class="bg-gray-800/50 p-2 rounded-lg border border-gray-700/50 hover:border-[#9F153E]/50 transition-all duration-300">
-              <p class="text-[#9F153E] font-bold text-lg">72</p>
-              <p class="text-gray-400 text-xs">Trailers</p>
-            </div>
-            <div class="bg-gray-800/50 p-2 rounded-lg border border-gray-700/50 hover:border-[#9F153E]/50 transition-all duration-300">
-              <p class="text-[#9F153E] font-bold text-lg">52</p>
-              <p class="text-gray-400 text-xs">Hydraulic Axles</p>
-            </div>
-            <div class="bg-gray-800/50 p-2 rounded-lg border border-gray-700/50 hover:border-[#9F153E]/50 transition-all duration-300">
-              <p class="text-[#9F153E] font-bold text-lg">75</p>
-              <p class="text-gray-400 text-xs">LPG Tankers</p>
-            </div>
-          </div>
+
+  <div class="flex gap-6 items-start">
+  <!-- Map Button -->
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=79+Sambhunath+Pandit+Street+Kolkata+700020"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Open location in Google Maps"
+    class="flex-shrink-0 w-14 h-14 rounded-xl bg-[#1f2937]
+           flex items-center justify-center
+           transition-all duration-300
+           hover:bg-[#9F153E]/20
+           hover:scale-105
+           focus:outline-none focus:ring-2 focus:ring-[#9F153E]/60"
+  >
+    <i class="pi pi-map-marker text-[#9F153E] text-xl"></i>
+  </a>
+
+  <!-- Content -->
+  <div class="space-y-2">
+    <p class="text-xs font-semibold tracking-widest text-[#9F153E] uppercase">
+      Corporate Office
+    </p>
+
+    <p class="text-gray-200 text-base font-medium leading-snug">
+      79, Sambhunath Pandit Street
+    </p>
+
+    <p class="text-gray-400 text-sm">
+      Kolkata <span class="mx-1 text-gray-600">•</span> 700020
+    </p>
+  </div>
+</div>
+</li>
+
+      <!-- Email -->
+      <li class="flex gap-4 p-4 rounded-xl bg-gray-900/50 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300">
+        <div class="flex-shrink-0 p-2.5 bg-gray-800 rounded-lg text-[#9F153E]">
+          <i class="pi pi-envelope text-lg"></i>
         </div>
+        <div class="flex items-center">
+          <a
+            href="mailto:shivam@ashokroadlines.com"
+            class="text-gray-300 text-sm hover:text-[#9F153E] transition-colors"
+          >
+            shivam@ashokroadlines.com
+          </a>
+        </div>
+      </li>
+
+      <!-- 24/7 Support -->
+      <li class="flex gap-4 p-4 rounded-xl bg-gradient-to-br from-[#9F153E]/20 to-transparent border border-[#9F153E]/30">
+        <div class="flex-shrink-0 p-2.5 bg-[#9F153E] rounded-lg text-white shadow-lg">
+          <i class="pi pi-clock text-lg"></i>
+        </div>
+        <div>
+          <p class="text-white text-sm font-semibold">24/7 Support</p>
+          <p class="text-gray-400 text-xs">All India Operations</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
       </div>
 
       <!-- Branch Locations -->
