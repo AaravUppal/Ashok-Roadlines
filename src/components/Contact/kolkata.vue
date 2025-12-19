@@ -125,27 +125,30 @@
           </button>
 
           <!-- Status -->
-          <transition
-            enter-active-class="transition duration-300"
-            enter-from-class="opacity-0"
-            enter-to-class="opacity-100"
-            leave-active-class="transition duration-200"
-            leave-from-class="opacity-100"
-            leave-to-class="opacity-0"
-          >
-            <p
-              v-if="submitStatus === 'success'"
-              class="text-center text-xs text-green-400 font-semibold pt-2"
-            >
-              Message sent successfully!
-            </p>
-            <p
-              v-if="submitStatus === 'error'"
-              class="text-center text-xs text-red-400 font-semibold pt-2"
-            >
-              Failed to send message
-            </p>
-          </transition>
+        <transition
+  enter-active-class="transition duration-300"
+  enter-from-class="opacity-0"
+  enter-to-class="opacity-100"
+  leave-active-class="transition duration-200"
+  leave-from-class="opacity-100"
+  leave-to-class="opacity-0"
+>
+  <div v-if="submitStatus" class="text-center pt-2">
+    <p
+      v-if="submitStatus === 'success'"
+      class="text-xs text-green-400 font-semibold"
+    >
+      Message sent successfully!
+    </p>
+
+    <p
+      v-else-if="submitStatus === 'error'"
+      class="text-xs text-red-400 font-semibold"
+    >
+      Failed to send message
+    </p>
+  </div>
+</transition>
         </form>
       </div>
     </div>
