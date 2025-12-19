@@ -19,7 +19,7 @@ import HydraulicAxles from '../components/equipments/hydraulic-axles.vue'
 import Pullers from '../components/equipments/pullers.vue'
 
 // Cranes (⚠️ CASE FIXED)
-import CranesOverview from '../components/equipments/CranesOverview.vue'
+import CranesOverview from '../components/equipments/Cranelanding.vue'
 import CrawlerCrane from '../components/equipments/crane-crawler.vue'
 import TireMountCrane from '../components/equipments/crane-tire-mount.vue'
 
