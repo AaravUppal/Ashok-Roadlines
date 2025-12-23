@@ -68,7 +68,7 @@
                           transform hover:scale-105 transition-all duration-300 shadow-xl text-sm sm:text-base"
                 >
                   <span>Learn More</span>
-                  <ArrowRightIcon class="w-5 h-5" />
+                  
                 </router-link>
 
                 <router-link
@@ -199,78 +199,80 @@
         </div>
       </section>
 
-      <!-- Services Section -->
-      <section
-        id="services"
-        ref="servicesSection"
-        class="py-16 md:py-20 bg-gray-50 relative"
-      >
-        <div class="container mx-auto px-6">
-          <div class="text-center mb-12 md:mb-16 max-w-4xl mx-auto scroll-reveal">
-            <div class="inline-flex items-center gap-2 mb-4">
-              <div class="w-8 h-px bg-[#9F153E]"></div>
-              <span
-                class="text-xs sm:text-sm uppercase tracking-widest text-[#9F153E] font-bold"
-              >
-                Services
-              </span>
-              <div class="w-8 h-px bg-[#9F153E]"></div>
-            </div>
+     <!-- Services Section -->
+<section
+  id="services"
+  ref="servicesSection"
+  class="py-16 md:py-20 bg-gray-50 relative"
+>
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12 md:mb-16 max-w-4xl mx-auto scroll-reveal">
+      <div class="inline-flex items-center gap-2 mb-4">
+        <div class="w-8 h-px bg-[#9F153E]"></div>
+        <span
+          class="text-xs sm:text-sm uppercase tracking-widest text-[#9F153E] font-bold"
+        >
+          Services
+        </span>
+        <div class="w-8 h-px bg-[#9F153E]"></div>
+      </div>
 
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-3 md:mb-4">
-              Complete <span class="text-[#9F153E]">Logistics Solutions</span>
-            </h2>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-3 md:mb-4">
+        Complete <span class="text-[#9F153E]">Logistics Solutions</span>
+      </h2>
 
-            <p class="text-base sm:text-lg text-gray-600">
-              From heavy equipment to specialized cargo
-            </p>
+      <p class="text-base sm:text-lg text-gray-600">
+        From heavy equipment to specialized cargo
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <router-link
+          v-for="(service, index) in services"
+          :key="index"
+          to="/services"
+          class="group block p-5 md:p-6 rounded-2xl bg-white border-2 border-gray-100
+                 hover:border-[#9F153E]/30 hover:shadow-xl
+                 transition-all duration-500 cursor-pointer
+                 hover:-translate-y-1 overflow-hidden relative scroll-reveal"
+          :style="{ transitionDelay: `${index * 50}ms` }"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-[#9F153E] to-[#8f4740] 
+                   opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"
+          ></div>
+
+          <div
+            class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl mb-4
+                   bg-[#9F153E]/10 group-hover:bg-white/20
+                   transition-all duration-500 group-hover:scale-110 relative z-20"
+          >
+            <component
+              :is="service.icon"
+              class="w-7 h-7 md:w-8 md:h-8 text-[#9F153E] group-hover:text-white 
+                     transition-colors duration-500"
+            />
           </div>
 
-          <div class="max-w-7xl mx-auto">
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-              <div
-                v-for="(service, index) in services"
-                :key="index"
-                class="group p-5 md:p-6 rounded-2xl bg-white border-2 border-gray-100
-                       hover:border-[#9F153E]/30 hover:shadow-xl
-                       transition-all duration-500 cursor-pointer
-                       hover:-translate-y-1 overflow-hidden relative scroll-reveal"
-                :style="{ transitionDelay: `${index * 50}ms` }"
-              >
-                <div
-                  class="absolute inset-0 bg-gradient-to-br from-[#9F153E] to-[#8f4740] 
-                            opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"
-                ></div>
+          <h3
+            class="text-base md:text-lg font-black text-gray-900 mb-2 
+                   group-hover:text-white transition-colors duration-500 relative z-20"
+          >
+            {{ service.title }}
+          </h3>
+          <p
+            class="text-xs sm:text-sm text-gray-600 leading-relaxed
+                   group-hover:text-white/90 transition-colors duration-500 relative z-20"
+          >
+            {{ service.description }}
+          </p>
+        </router-link>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div
-                  class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl mb-4
-                            bg-[#9F153E]/10 group-hover:bg-white/20
-                            transition-all duration-500 group-hover:scale-110 relative z-20"
-                >
-                  <component
-                    :is="service.icon"
-                    class="w-7 h-7 md:w-8 md:h-8 text-[#9F153E] group-hover:text-white 
-                            transition-colors duration-500"
-                  />
-                </div>
-
-                <h3
-                  class="text-base md:text-lg font-black text-gray-900 mb-2 
-                           group-hover:text-white transition-colors duration-500 relative z-20"
-                >
-                  {{ service.title }}
-                </h3>
-                <p
-                  class="text-xs sm:text-sm text-gray-600 leading-relaxed
-                          group-hover:text-white/90 transition-colors duration-500 relative z-20"
-                >
-                  {{ service.description }}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- Industry Sectors -->
       <section
@@ -541,12 +543,12 @@ const aboutCards = ref([
   },
   {
     icon: TruckIcon,
-    title: 'Massive Fleet',
+    title: 'Extensive Fleet',
     description: '225+ vehicles including 75 LPG tankers'
   },
   {
     icon: UserGroupIcon,
-    title: 'Corporate Trusted',
+    title: 'Industry Trusted',
     description: 'Serving 20+ major PSUs and enterprises'
   }
 ])

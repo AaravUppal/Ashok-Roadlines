@@ -91,7 +91,7 @@
                      text-white border border-[#9F153E] bg-[#9F153E]
                      hover:bg-[#b81b4a] transition"
             >
-              Enquire about this
+              Enquire 
             </router-link>
           </div>
         </section>

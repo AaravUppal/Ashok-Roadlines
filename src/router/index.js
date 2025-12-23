@@ -31,7 +31,6 @@ import LpgTanker from '../components/equipments/lpg-tanker.vue'
 import AmmoniaTanker from '../components/equipments/ammonia-tanker.vue'
 
 // Contact pages
-import Kolkata from '../components/Contact/kolkata.vue'
 
 const routes = [
   // Core pages
@@ -42,7 +41,6 @@ const routes = [
 
   // Contact
   { path: '/contact', component: ContactLanding },
-  { path: '/contact/kolkata', component: Kolkata },
 
   // Trailers
   { path: '/equipment/trailers', component: TrailersOverview },

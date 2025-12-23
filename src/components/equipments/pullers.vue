@@ -122,7 +122,7 @@
                      text-white border border-[#9F153E] bg-[#9F153E]
                      hover:bg-[#b81b4a] transition"
             >
-              Enquire about this
+              Enquire 
             </router-link>
           </div>
         </section>
@@ -151,11 +151,11 @@ const product = {
 const brands = [
   {
     name: 'Volvo',
-    logo: '/assets/clients/volvo.png'
+    logo: '/assets/clients/volvo.jpeg'
   },
   {
     name: 'Eicher',
-    logo: '/assets/clients/eicher.png'
+    logo: '/assets/clients/Eicher.jpg'
   }
 ]
 </script>

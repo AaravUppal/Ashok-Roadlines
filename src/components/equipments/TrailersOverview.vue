@@ -170,6 +170,6 @@ const images = {
   flatbed: '/assets/equipment/trailers/flatbed.png',
   semiLowbed: '/assets/equipment/trailers/semi-lowbed.png',
   lowbed: '/assets/equipments/lowbed.jpeg',
-  lowbed16: '/assets/equipment/trailers/lowbed-16w.png'
+  lowbed16: '/assets/equipments/lowbed.jpeg',
 }
 </script>

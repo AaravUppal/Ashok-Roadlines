@@ -73,7 +73,7 @@
       </router-link>
 
       <!-- Additional Info -->
-      <div class="info-box">
+      <div class="info-box ml-4">
         <div class="info-icon">📦</div>
         <p class="info-text">Don't worry! Our logistics team is on it.</p>
       </div>

@@ -151,7 +151,7 @@ const product = {
 const brands = [
   {
     name: 'Putzmeister',
-    logo: '/assets/clients/putzmeister.png'
+    logo: '/assets/clients/Putzmeister.png'
   }
 ]
 </script>

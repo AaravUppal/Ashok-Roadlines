@@ -137,7 +137,7 @@ const product = {
   tagline: 'Versatile telescopic handler for elevated material handling.',
   category: 'Lifting equipment',
   meta: '4T capacity • 18m reach',
-  image: '/assets/equipments/telehandler.jpeg',
+  image: '/assets/equipments/Telehandler.webp',
   description:
     'Multi-purpose telescopic material handlers combining the capabilities of a forklift and crane. Ideal for construction sites, warehouses, and agricultural applications requiring flexible reach and lifting solutions.',
   points: [
@@ -151,7 +151,7 @@ const product = {
 const brands = [
   {
     name: 'Manitou',
-    logo: '/assets/clients/manitou.png'
+    logo: '/assets/clients/manitou.svg'
   }
 ]
 </script>

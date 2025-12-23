@@ -77,36 +77,7 @@
             </ul>
           </div>
 
-          <!-- Brand badges row -->
-          <div class="space-y-3">
-            <div class="flex items-center justify-between gap-3">
-              <h3 class="text-xs uppercase tracking-[0.18em] text-gray-300">
-                Supported brands
-              </h3>
-              <span class="text-[11px] text-gray-400">
-                {{ brands.length }} brand{{ brands.length !== 1 ? 's' : '' }}
-              </span>
-            </div>
-
-            <div class="flex flex-wrap gap-2">
-              <div
-                v-for="brand in brands"
-                :key="brand.name"
-                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full
-                       bg-white/5 border border-white/10 hover:border-[#9F153E]/60
-                       hover:bg-[#9F153E]/10 transition"
-              >
-                <img
-                  :src="brand.logo"
-                  :alt="brand.name"
-                  class="w-5 h-5 object-contain"
-                />
-                <span class="text-xs text-gray-100">
-                  {{ brand.name }}
-                </span>
-              </div>
-            </div>
-          </div>
+         
 
           <!-- Simple CTA strip -->
           <div
@@ -122,7 +93,7 @@
                      text-white border border-[#9F153E] bg-[#9F153E]
                      hover:bg-[#b81b4a] transition"
             >
-              Enquire about this
+              Enquire
             </router-link>
           </div>
         </section>

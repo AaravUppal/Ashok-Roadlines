@@ -317,6 +317,18 @@
             ></span>
           </router-link>
 
+          <!-- NEW: Projects (desktop) -->
+          <router-link
+            to="/projects"
+            class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#9F153E] transition-all duration-300 group"
+            active-class="text-[#9F153E]"
+          >
+            <span class="relative z-10">Projects</span>
+            <span
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#9F153E] to-[#c96860] transition-all duration-300 ease-out group-hover:w-full rounded-full"
+            ></span>
+          </router-link>
+
           <router-link
             to="/gallery"
             class="relative px-4 py-2 text-gray-700 font-bold text-sm uppercase tracking-wide hover:text-[#9F153E] transition-all duration-300 group"
@@ -577,6 +589,17 @@
             >
               <i class="pi pi-briefcase text-base group-hover:scale-110 transition-transform"></i>
               Services
+            </router-link>
+
+            <!-- NEW: Projects (mobile) -->
+            <router-link
+              to="/projects"
+              @click="closeMobileMenu"
+              class="flex items-center gap-3 px-4 py-3.5 text-gray-700 font-bold uppercase text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-[#9F153E] hover:to-[#c96860] rounded-xl transition-all duration-300 border-2 border-transparent hover:border-[#9F153E] group"
+              :class="{ 'text-white bg-gradient-to-r from-[#9F153E] to-[#c96860] border-[#9F153E]': $route.path === '/projects' }"
+            >
+              <i class="pi pi-folder text-base group-hover:scale-110 transition-transform"></i>
+              Projects
             </router-link>
 
             <router-link
