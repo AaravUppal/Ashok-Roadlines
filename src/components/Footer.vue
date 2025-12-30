@@ -129,6 +129,23 @@
                 <span class="group-hover:translate-x-1 transition-all duration-300 font-medium">Services</span>
               </router-link>
             </li>
+              <li>
+              <router-link
+                to="/projects"
+                class="text-gray-400 hover:text-[#9F153E] transition-all duration-300 flex items-center group"
+              >
+                <span
+                  class="w-6 h-6 rounded-lg bg-gray-800 group-hover:bg-[#9F153E]/20 flex items-center justify-center mr-3 transition-all duration-300"
+                >
+                  <i
+                    class="pi pi-angle-right text-xs transform group-hover:translate-x-0.5 transition-transform duration-300"
+                  ></i>
+                </span>
+                <span class="group-hover:translate-x-1 transition-all duration-300 font-medium"
+                  >Projects</span
+                >
+              </router-link>
+            </li>
             <li>
               <router-link
                 to="/gallery"

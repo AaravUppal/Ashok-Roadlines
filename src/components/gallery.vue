@@ -28,9 +28,7 @@
             </p>
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-lg font-semibold text-white">
-                  {{ imageFiles.length }}
-                </p>
+                
                 <p class="text-xs text-gray-300">
                   Equipment photos
                 </p>
@@ -197,7 +195,8 @@ const imageFiles = [
   'PicknCarry.jpeg',
   'PullerandHydraulicAxle.jpeg',
   'tyremountcrane.jpeg',
-  'Telehandler.webp'
+  'Telehandler.webp',
+  'lpg.png'
 ]
 
 const isLightboxOpen = ref(false)

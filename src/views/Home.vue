@@ -465,14 +465,14 @@ const heroSlides = ref([
   {
     id: 2,
     type: 'image',
-    media: '/assets/hero5.jpg',
+    media: '/assets/hero1.jpeg',
     title: 'HEAVY TRANSPORT SPECIALISTS',
     subtitle: '50+ Years of Excellence in ODC & Project Cargo'
   },
   {
     id: 3,
     type: 'image',
-    media: '/assets/hero1.jpeg',
+    media: '/assets/hero.jpeg',
     title: 'PAN-INDIA NETWORK',
     subtitle: 'Connecting Industries Across the Nation'
   },

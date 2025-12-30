@@ -15,7 +15,7 @@
           <img
             src="/assets/logo.png"
             alt="Ashok Roadlines"
-            class="h-14 w-auto relative z-10 drop-shadow-2xl transition-transform duration-300"
+            class="h-16 w-auto relative z-10 drop-shadow-2xl transition-transform duration-300 "
           />
         </router-link>
 

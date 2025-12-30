@@ -106,7 +106,7 @@ const product = {
   tagline: 'Specialized liquid petroleum gas transportation solution.',
   category: 'Hazmat transport',
   meta: 'Pressure vessel certified',
-  image: '/assets/equipments/lpgtanker.jpeg',
+  image: '/assets/equipments/lpg.png',
   description:
     'Purpose-built pressure vessels for safe and compliant transportation of liquefied petroleum gas. Our extensive fleet ensures reliable supply chain operations for domestic, commercial, and industrial LPG distribution networks.',
   points: [

@@ -7,6 +7,7 @@ import Services from '../components/service.vue'
 import Gallery from '../components/gallery.vue'
 import ContactLanding from '../components/contactlanding.vue'
 import NotFound from '../components/404.vue'
+import project from '../components/project.vue'
 
 // Equipment / product pages
 import TrailersOverview from '../components/equipments/TrailersOverview.vue'
@@ -38,6 +39,7 @@ const routes = [
   { path: '/about', component: About },
   { path: '/services', component: Services },
   { path: '/gallery', component: Gallery },
+  {path: '/projects', component: project},
 
   // Contact
   { path: '/contact', component: ContactLanding },

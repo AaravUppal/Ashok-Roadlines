@@ -59,7 +59,7 @@
               <span
                 class="px-3 py-1 rounded-full bg-white/5 border border-white/10"
               >
-                {{ product.meta }}
+                4T capacity • 18m reach
               </span>
             </div>
           </div>
@@ -136,7 +136,6 @@ const product = {
   name: 'Telehandler',
   tagline: 'Versatile telescopic handler for elevated material handling.',
   category: 'Lifting equipment',
-  meta: '4T capacity • 18m reach',
   image: '/assets/equipments/Telehandler.webp',
   description:
     'Multi-purpose telescopic material handlers combining the capabilities of a forklift and crane. Ideal for construction sites, warehouses, and agricultural applications requiring flexible reach and lifting solutions.',
