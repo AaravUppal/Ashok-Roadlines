@@ -65,7 +65,7 @@
           </div>
           <div class="w-full p-5 sm:p-6 flex flex-col gap-3">
             <h2 class="text-lg sm:text-xl font-semibold">
-              Tire Mount Crane
+              Tyre-Mounted Crane
             </h2>
             <p class="text-sm text-gray-300">
               Road-mobile cranes, offering faster deployment between sites for erection and material handling.

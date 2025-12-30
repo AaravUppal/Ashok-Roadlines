@@ -224,7 +224,7 @@
                               <div
                                 class="w-1.5 h-1.5 rounded-full bg-[#9F153E] group-hover/sub:scale-150 transition-transform"
                               ></div>
-                              Tire Mount Crane
+                              Tyre-Mountedt Crane
                             </router-link>
                           </div>
                         </div>
@@ -521,7 +521,7 @@
                           @click="closeMobileMenu"
                           class="block px-8 py-2.5 text-gray-600 text-sm hover:text-[#9F153E] hover:bg-white transition-all duration-300 font-medium border-l-4 border-transparent hover:border-[#9F153E]"
                         >
-                          Tire Mount Crane
+                          Tyre-Mounted Crane
                         </router-link>
                       </div>
                     </transition>

@@ -332,7 +332,7 @@
                       class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"
                     ></span>
                     <span class="group-hover:translate-x-1 transition-transform duration-300">
-                      Tire Mount Crane
+                      Tyre-Mounted Crane
                     </span>
                   </router-link>
                 </li>
