@@ -31,7 +31,7 @@
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
           <!-- Founder Image -->
           <div class="relative group">
-            <div class="absolute -inset-4 bg-[#9F153E]/10 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+            <div class=""></div>
             
             <div class="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl h-[500px]">
               <img 

@@ -348,7 +348,7 @@
                 class="text-xs uppercase tracking-[0.18em] text-gray-500 mb-3 font-bold flex items-center gap-2"
               >
                 <i class="pi pi-cog text-[#9F153E] text-xs"></i>
-                Other Equipment
+                Specialized Equipment
               </p>
               <ul class="space-y-2 pl-1">
                 <li v-for="item in otherEquipment" :key="item.to">
