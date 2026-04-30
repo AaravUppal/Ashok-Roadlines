@@ -102,7 +102,7 @@
 
 <script setup>
 const product = {
-  name: 'Tyre-Mounted Crane ',
+  name: 'Tyre-Mounted Crane',
   tagline: 'Mobile lifting power with rapid deployment capability.',
   category: 'Lifting equipment',
   meta: '80 metric tons capacity',

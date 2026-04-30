@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-gradient-to-b from-gray-900 to-black text-white relative overflow-hidden">
-    <!-- Enhanced animated background -->
+    <!-- Animated background -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#9F153E] rounded-full blur-3xl animate-pulse"></div>
       <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#9F153E] rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -13,10 +13,12 @@
       style="background-image: radial-gradient(circle, #9F153E 1px, transparent 1px); background-size: 50px 50px;"
     ></div>
 
-    <div class="container mx-auto px-4 py-16 relative z-10">
+    <div class="container mx-auto px-6 py-16 relative z-10">
+
       <!-- Main Footer Content -->
       <div class="grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-16">
-        <!-- Company Info - Enhanced -->
+
+        <!-- Company Info -->
         <div class="space-y-6 lg:col-span-1">
           <div class="flex items-center space-x-3 mb-6 group">
             <div
@@ -73,7 +75,7 @@
           </div>
         </div>
 
-        <!-- Quick Links - Enhanced -->
+        <!-- Quick Links -->
         <div>
           <h4 class="text-xl font-bold mb-6 text-white relative inline-block pb-2">
             Quick Links
@@ -109,9 +111,7 @@
                     class="pi pi-angle-right text-xs transform group-hover:translate-x-0.5 transition-transform duration-300"
                   ></i>
                 </span>
-                <span class="group-hover:translate-x-1 transition-all duration-300 font-medium"
-                  >About Us</span
-                >
+                <span class="group-hover:translate-x-1 transition-all duration-300 font-medium">About Us</span>
               </router-link>
             </li>
             <li>
@@ -129,7 +129,7 @@
                 <span class="group-hover:translate-x-1 transition-all duration-300 font-medium">Services</span>
               </router-link>
             </li>
-              <li>
+            <li>
               <router-link
                 to="/projects"
                 class="text-gray-400 hover:text-[#9F153E] transition-all duration-300 flex items-center group"
@@ -141,9 +141,7 @@
                     class="pi pi-angle-right text-xs transform group-hover:translate-x-0.5 transition-transform duration-300"
                   ></i>
                 </span>
-                <span class="group-hover:translate-x-1 transition-all duration-300 font-medium"
-                  >Projects</span
-                >
+                <span class="group-hover:translate-x-1 transition-all duration-300 font-medium">Projects</span>
               </router-link>
             </li>
             <li>
@@ -179,7 +177,7 @@
           </ul>
         </div>
 
-        <!-- Our Services - Enhanced -->
+        <!-- Our Services -->
         <div>
           <h4 class="text-xl font-bold mb-6 text-white relative inline-block pb-2">
             Our Services
@@ -203,7 +201,7 @@
           </ul>
         </div>
 
-        <!-- Equipment Links - Enhanced -->
+        <!-- Equipment Links -->
         <div class="xl:col-span-2">
           <h4 class="text-xl font-bold mb-6 text-white relative inline-block pb-2">
             Equipment
@@ -213,11 +211,9 @@
           </h4>
 
           <div class="grid lg:grid-cols-2 gap-4 text-sm">
-            <!-- Trailers -->
+            <!-- Trailers & Cranes -->
             <div>
-              <p
-                class="text-xs uppercase tracking-[0.18em] text-gray-500  font-bold flex items-center gap-2"
-              >
+              <p class="text-xs uppercase tracking-[0.18em] text-gray-500 font-bold flex items-center gap-2">
                 <i class="pi pi-truck text-[#9F153E] text-xs"></i>
                 Trailers
               </p>
@@ -227,12 +223,8 @@
                     to="/equipment/trailers"
                     class="flex items-center text-gray-300 hover:text-[#9F153E] transition-all duration-300 group"
                   >
-                    <span
-                      class="w-1.5 h-1.5 bg-[#9F153E] rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"
-                    ></span>
-                    <span class="group-hover:translate-x-1 transition-transform duration-300 font-medium">
-                      Overview
-                    </span>
+                    <span class="w-1.5 h-1.5 bg-[#9F153E] rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></span>
+                    <span class="group-hover:translate-x-1 transition-transform duration-300 font-medium">Overview</span>
                   </router-link>
                 </li>
                 <li>
@@ -240,12 +232,8 @@
                     to="/equipment/trailers/flatbed"
                     class="flex items-center text-gray-400 hover:text-gray-200 transition-all duration-300 group"
                   >
-                    <span
-                      class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"
-                    ></span>
-                    <span class="group-hover:translate-x-1 transition-transform duration-300">
-                      Flatbed Trailer
-                    </span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"></span>
+                    <span class="group-hover:translate-x-1 transition-transform duration-300">Flatbed Trailer</span>
                   </router-link>
                 </li>
                 <li>
@@ -253,12 +241,8 @@
                     to="/equipment/trailers/semi-lowbed"
                     class="flex items-center text-gray-400 hover:text-gray-200 transition-all duration-300 group"
                   >
-                    <span
-                      class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"
-                    ></span>
-                    <span class="group-hover:translate-x-1 transition-transform duration-300">
-                      Semi Lowbed
-                    </span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"></span>
+                    <span class="group-hover:translate-x-1 transition-transform duration-300">Semi Lowbed</span>
                   </router-link>
                 </li>
                 <li>
@@ -266,12 +250,8 @@
                     to="/equipment/trailers/lowbed"
                     class="flex items-center text-gray-400 hover:text-gray-200 transition-all duration-300 group"
                   >
-                    <span
-                      class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"
-                    ></span>
-                    <span class="group-hover:translate-x-1 transition-transform duration-300">
-                      Lowbed Trailer
-                    </span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"></span>
+                    <span class="group-hover:translate-x-1 transition-transform duration-300">Lowbed Trailer</span>
                   </router-link>
                 </li>
                 <li>
@@ -279,20 +259,13 @@
                     to="/equipment/trailers/lowbed-16-wheeler"
                     class="flex items-center text-gray-400 hover:text-gray-200 transition-all duration-300 group"
                   >
-                    <span
-                      class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"
-                    ></span>
-                    <span class="group-hover:translate-x-1 transition-transform duration-300">
-                      Lowbed 16 Wheeler
-                    </span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"></span>
+                    <span class="group-hover:translate-x-1 transition-transform duration-300">Lowbed 16 Wheeler</span>
                   </router-link>
                 </li>
               </ul>
 
-              <!-- Cranes -->
-               <p
-                class="text-xs uppercase tracking-[0.18em] text-gray-500 mb-3 font-bold flex items-center gap-2 mt-4"
-              >
+              <p class="text-xs uppercase tracking-[0.18em] text-gray-500 mb-3 font-bold flex items-center gap-2 mt-4">
                 <i class="pi pi-wrench text-[#9F153E] text-xs"></i>
                 Cranes
               </p>
@@ -302,12 +275,8 @@
                     to="/equipment/crane"
                     class="flex items-center text-gray-300 hover:text-[#9F153E] transition-all duration-300 group"
                   >
-                    <span
-                      class="w-1.5 h-1.5 bg-[#9F153E] rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"
-                    ></span>
-                    <span class="group-hover:translate-x-1 transition-transform duration-300 font-medium">
-                      Overview
-                    </span>
+                    <span class="w-1.5 h-1.5 bg-[#9F153E] rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></span>
+                    <span class="group-hover:translate-x-1 transition-transform duration-300 font-medium">Overview</span>
                   </router-link>
                 </li>
                 <li>
@@ -315,12 +284,8 @@
                     to="/equipment/crane/crawler"
                     class="flex items-center text-gray-400 hover:text-gray-200 transition-all duration-300 group"
                   >
-                    <span
-                      class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"
-                    ></span>
-                    <span class="group-hover:translate-x-1 transition-transform duration-300">
-                      Crawler Crane
-                    </span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"></span>
+                    <span class="group-hover:translate-x-1 transition-transform duration-300">Crawler Crane</span>
                   </router-link>
                 </li>
                 <li>
@@ -328,25 +293,16 @@
                     to="/equipment/crane/tire-mount"
                     class="flex items-center text-gray-400 hover:text-gray-200 transition-all duration-300 group"
                   >
-                    <span
-                      class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"
-                    ></span>
-                    <span class="group-hover:translate-x-1 transition-transform duration-300">
-                      Tyre-Mounted Crane
-                    </span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"></span>
+                    <span class="group-hover:translate-x-1 transition-transform duration-300">Tyre-Mounted Crane</span>
                   </router-link>
                 </li>
-    
               </ul>
-              
             </div>
 
-            
-             <!-- Other Equipment - Right side, same level -->
+            <!-- Specialized Equipment -->
             <div>
-                <p
-                class="text-xs uppercase tracking-[0.18em] text-gray-500 mb-3 font-bold flex items-center gap-2"
-              >
+              <p class="text-xs uppercase tracking-[0.18em] text-gray-500 mb-3 font-bold flex items-center gap-2">
                 <i class="pi pi-cog text-[#9F153E] text-xs"></i>
                 Specialized Equipment
               </p>
@@ -356,142 +312,89 @@
                     :to="item.to"
                     class="flex items-center text-gray-400 hover:text-gray-200 transition-all duration-300 group"
                   >
-                    <span
-                      class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"
-                    ></span>
-                    <span class="group-hover:translate-x-1 transition-transform duration-300">
-                      {{ item.label }}
-                    </span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full mr-2 group-hover:bg-[#9F153E] transition-colors duration-300"></span>
+                    <span class="group-hover:translate-x-1 transition-transform duration-300">{{ item.label }}</span>
                   </router-link>
                 </li>
               </ul>
             </div>
-
-            
           </div>
         </div>
       </div>
 
-      <!-- Get In Touch section BELOW the grid -->
-      <section class="mb-20 px-4 sm:px-6 lg:px-0">
-  <!-- Section heading -->
-  <!-- <h4 class="text-xl font-bold text-white relative inline-block pb-2 mb-10">
-    Get In Touch
-    <span
-      class="absolute bottom-0 left-0 w-20 h-1 bg-gradient-to-r from-[#9F153E] via-[#c96860] to-transparent rounded-full"
-    ></span>
-  </h4> -->
+      <!-- Get In Touch -->
+      <section class="mb-16 px-0">
+        <div class="grid gap-6 sm:grid-cols-2">
+          <!-- Corporate Office -->
+          <div
+            class="group flex items-start gap-5 p-6 rounded-2xl
+                   bg-gradient-to-br from-gray-900/50 to-gray-800/30
+                   hover:from-gray-800/70 hover:to-gray-900/50
+                   border border-gray-800/50 hover:border-[#9F153E]/30
+                   backdrop-blur-sm transition-all duration-300"
+          >
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=79+Sambhunath+Pandit+Street+Kolkata+700020"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open location in Google Maps"
+              class="flex-shrink-0 w-14 h-14 rounded-xl
+                     bg-gray-800/50 border border-gray-700/50
+                     flex items-center justify-center
+                     transition-all duration-300
+                     hover:bg-[#9F153E]/20 hover:border-[#9F153E]/50
+                     hover:scale-105 hover:shadow-lg hover:shadow-[#9F153E]/20
+                     focus:outline-none focus:ring-2 focus:ring-[#9F153E]/60"
+            >
+              <i class="pi pi-map-marker text-[#9F153E] text-xl"></i>
+            </a>
 
-  <!-- Cards grid -->
-  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-    <!-- Corporate Office -->
-    <div
-      class="group flex items-start gap-5 p-6 rounded-2xl
-             bg-gradient-to-br from-gray-900/50 to-gray-800/30
-             hover:from-gray-800/70 hover:to-gray-900/50
-             border border-gray-800/50 hover:border-[#9F153E]/30
-             backdrop-blur-sm transition-all duration-300"
-    >
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=79+Sambhunath+Pandit+Street+Kolkata+700020"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open location in Google Maps"
-        class="flex-shrink-0 w-14 h-14 rounded-xl
-               bg-gray-800/50 border border-gray-700/50
-               flex items-center justify-center
-               transition-all duration-300
-               hover:bg-[#9F153E]/20 hover:border-[#9F153E]/50
-               hover:scale-105 hover:shadow-lg hover:shadow-[#9F153E]/20
-               focus:outline-none focus:ring-2 focus:ring-[#9F153E]/60"
-      >
-        <i class="pi pi-map-marker text-[#9F153E] text-xl"></i>
-      </a>
+            <div class="space-y-3">
+              <p class="text-xs font-bold tracking-widest text-[#9F153E] uppercase flex items-center gap-2">
+                <i class="pi pi-building text-xs"></i>
+                Corporate Office
+              </p>
+              <p class="text-gray-200 text-base font-semibold leading-snug group-hover:text-white transition-colors duration-300">
+                79, Sambhunath Pandit Street
+              </p>
+              <p class="text-gray-400 text-sm flex items-center gap-2">
+                <span>Kolkata</span>
+                <span class="text-gray-700">•</span>
+                <span>700020</span>
+              </p>
+            </div>
+          </div>
 
-      <div class="space-y-3">
-        <p
-          class="text-xs font-bold tracking-widest text-[#9F153E] uppercase flex items-center gap-2"
-        >
-          <i class="pi pi-building text-xs"></i>
-          Corporate Office
-        </p>
+          <!-- Email -->
+          <div
+            class="group flex items-center gap-5 p-6 rounded-2xl
+                   bg-gradient-to-br from-gray-900/50 to-gray-800/30
+                   hover:from-gray-800/70 hover:to-gray-900/50
+                   border border-gray-800/50 hover:border-[#9F153E]/30
+                   backdrop-blur-sm transition-all duration-300"
+          >
+            <div
+              class="flex-shrink-0 w-14 h-14 rounded-xl
+                     bg-gray-800/50 border border-gray-700/50
+                     text-[#9F153E]
+                     flex items-center justify-center
+                     group-hover:bg-[#9F153E]/20 group-hover:border-[#9F153E]/50
+                     transition-all duration-300"
+            >
+              <i class="pi pi-envelope text-xl"></i>
+            </div>
+            <a
+              href="mailto:shivam@ashokroadlines.com"
+              class="text-gray-300 text-sm font-medium break-all
+                     hover:text-[#9F153E] transition-colors duration-300"
+            >
+              shivam@ashokroadlines.com
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <p
-          class="text-gray-200 text-base font-semibold leading-snug
-                 group-hover:text-white transition-colors duration-300"
-        >
-          79, Sambhunath Pandit Street
-        </p>
-
-        <p class="text-gray-400 text-sm flex items-center gap-2">
-          <span>Kolkata</span>
-          <span class="text-gray-700">•</span>
-          <span>700020</span>
-        </p>
-      </div>
-    </div>
-
-    <!-- Email -->
-    <div
-      class="group flex items-center gap-5 p-6 rounded-2xl
-             bg-gradient-to-br from-gray-900/50 to-gray-800/30
-             hover:from-gray-800/70 hover:to-gray-900/50
-             border border-gray-800/50 hover:border-[#9F153E]/30
-             backdrop-blur-sm transition-all duration-300"
-    >
-      <div
-        class="flex-shrink-0 w-14 h-14 rounded-xl
-               bg-gray-800/50 border border-gray-700/50
-               text-[#9F153E]
-               flex items-center justify-center
-               group-hover:bg-[#9F153E]/20 group-hover:border-[#9F153E]/50
-               transition-all duration-300"
-      >
-        <i class="pi pi-envelope text-xl"></i>
-      </div>
-
-      <a
-        href="mailto:shivam@ashokroadlines.com"
-        class="text-gray-300 text-sm font-medium break-all
-               hover:text-[#9F153E] transition-colors duration-300"
-      >
-        shivam@ashokroadlines.com
-      </a>
-    </div>
-
-    <!-- 24/7 Support -->
-    <div
-      class="flex items-center gap-5 p-6 rounded-2xl
-             bg-gradient-to-br from-[#9F153E]/20 via-[#c96860]/10 to-[#9F153E]/5
-             border border-[#9F153E]/40
-             backdrop-blur-sm
-             hover:border-[#9F153E]/60
-             hover:shadow-lg hover:shadow-[#9F153E]/20
-             transition-all duration-300"
-    >
-      <div
-        class="flex-shrink-0 w-14 h-14 rounded-xl
-               bg-gradient-to-br from-[#9F153E] to-[#8a4640]
-               text-white shadow-lg
-               flex items-center justify-center animate-pulse"
-      >
-        <i class="pi pi-clock text-xl"></i>
-      </div>
-
-      <div class="space-y-1">
-        <p class="text-white text-sm font-bold flex items-center gap-2">
-          24/7 Support
-          <span class="inline-flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
-        </p>
-        <p class="text-gray-400 text-xs">
-          All India Operations
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <!-- Branch Locations - Enhanced -->
+      <!-- Branch Locations -->
       <div class="mb-16 pb-12 border-b border-gray-800/50">
         <div class="text-center mb-8">
           <h4 class="text-2xl font-bold text-white mb-3 inline-block relative">
@@ -504,33 +407,25 @@
             Serving the nation with excellence from multiple locations
           </p>
         </div>
-        <div class="flex flex-wrap justify-center gap-4">
+        <div class="flex flex-wrap justify-center gap-3">
           <span
             v-for="location in locations"
             :key="location"
-            class="px-5 py-3 bg-gradient-to-br from-gray-800/70 to-gray-900/70 hover:from-[#9F153E] hover:to-[#8a4640] 
-                   text-gray-300 hover:text-white text-sm rounded-full 
-                   transition-all duration-300 cursor-pointer 
-                   transform hover:scale-110 hover:-translate-y-1
-                   shadow-lg hover:shadow-[#9F153E]/50
-                   border border-gray-700/50 hover:border-[#9F153E]/50
-                   backdrop-blur-sm group"
+            class="inline-flex items-center gap-2 px-4 py-2
+                   bg-gray-800/60 border border-gray-700/50
+                   text-gray-400 text-sm rounded-lg
+                   backdrop-blur-sm select-none"
           >
-            <i
-              class="pi pi-map-marker mr-2 text-xs group-hover:scale-125 transition-transform duration-300"
-            ></i>
             <span class="font-medium">{{ location }}</span>
           </span>
         </div>
       </div>
 
-      <!-- Bottom Bar - Enhanced -->
-      <div class="pt-8">
+      <!-- Bottom Bar -->
+      <div class="pt-6">
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
           <div class="text-center md:text-left">
-            <p
-              class="text-gray-500 text-sm flex flex-wrap items-center justify-center md:justify-start gap-2"
-            >
+            <p class="text-gray-500 text-sm flex flex-wrap items-center justify-center md:justify-start gap-2">
               <span class="flex items-center gap-1">
                 <i class="pi pi-copyright text-xs"></i>
                 {{ currentYear }} Ashok Roadlines. All rights reserved.
@@ -542,31 +437,26 @@
               </span>
             </p>
           </div>
-          <div class="flex flex-wrap gap-6 text-sm justify-center">
-            <a
-              href="#"
-              class="text-gray-500 hover:text-[#9F153E] transition-all duration-300 hover:underline hover:tracking-wide flex items-center gap-1.5 group"
-            >
-              <i class="pi pi-lock text-xs group-hover:scale-110 transition-transform duration-300"></i>
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-[#9F153E] transition-all duration-300 hover:underline hover:tracking-wide flex items-center gap-1.5 group"
-            >
-              <i class="pi pi-file text-xs group-hover:scale-110 transition-transform duration-300"></i>
-              Terms of Service
-            </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-[#9F153E] transition-all duration-300 hover:underline hover:tracking-wide flex items-center gap-1.5 group"
-            >
-              <i class="pi pi-sitemap text-xs group-hover:scale-110 transition-transform duration-300"></i>
-              Sitemap
-            </a>
-          </div>
+
+          <!-- Developed by -->
+          <a
+            href="https://aaravuppal.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2.5 px-4 py-2
+                   rounded-lg border border-gray-700/60
+                   bg-gray-800/40 backdrop-blur-sm
+                   text-gray-400 hover:text-white
+                   hover:border-[#9F153E]/40 hover:bg-gray-800/70
+                   transition-all duration-300 group"
+          >
+            <i class="pi pi-code text-[#9F153E] text-xs group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="text-xs font-semibold tracking-wide">Developed by</span>
+            <span class="text-sm font-bold text-gray-200 group-hover:text-white transition-colors duration-300">aaravuppal.com</span>
+          </a>
         </div>
       </div>
+
     </div>
   </footer>
 </template>
@@ -590,7 +480,7 @@ const services = [
 const locations = [
   'Kolkata',
   'Raigarh',
-  'Surat',
+  'Mumbai',
   'Durgapur',
   'Bhilai',
   'Ahmedabad',
@@ -617,41 +507,5 @@ const otherEquipment = [
 
 .delay-1000 {
   animation-delay: 1s;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0.05;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.1;
-    transform: scale(1.05);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.animate-shimmer {
-  animation: shimmer 2s infinite;
-}
-
-.bg-size-200 {
-  background-size: 200% 100%;
-}
-
-.bg-pos-0 {
-  background-position: 0% 50%;
-}
-
-.hover\:bg-pos-100:hover {
-  background-position: 100% 50%;
 }
 </style>

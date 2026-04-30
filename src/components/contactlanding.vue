@@ -152,7 +152,7 @@ const branches = [
   { id: 'kolkata', name: 'Kolkata', city: 'West Bengal' },
   { id: 'durgapur', name: 'Durgapur', city: 'West Bengal' },
   { id: 'raigarh', name: 'Raigarh', city: 'Chhattisgarh' },
-  { id: 'surat', name: 'Surat', city: 'Gujarat' },
+  { id: 'Mumbai', name: 'Mumbai', city: 'maharashtra' },
   { id: 'ahmedabad', name: 'Ahmedabad', city: 'Gujarat' },
   { id: 'vadodara', name: 'Vadodara', city: 'Gujarat' },
   { id: 'rourkela', name: 'Rourkela', city: 'Odisha' },

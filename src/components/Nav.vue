@@ -224,7 +224,7 @@
                               <div
                                 class="w-1.5 h-1.5 rounded-full bg-[#9F153E] group-hover/sub:scale-150 transition-transform"
                               ></div>
-                              Tyre-Mountedt Crane
+                              Tyre-Mounted Crane
                             </router-link>
                           </div>
                         </div>

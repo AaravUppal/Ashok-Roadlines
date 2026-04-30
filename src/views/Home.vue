@@ -1,10 +1,7 @@
 <template>
   <div class="min-h-screen bg-white">
     <!-- Hero Section -->
-    <div
-      id="home"
-      class="relative min-h-screen bg-black overflow-hidden"
-    >
+    <div id="home" class="relative min-h-screen bg-black overflow-hidden">
       <!-- Fixed Video/Image Background -->
       <div class="fixed inset-0 w-full h-screen z-0 pointer-events-none">
         <transition-group name="hero-fade">
@@ -31,7 +28,6 @@
             ></div>
           </div>
         </transition-group>
-
         <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
       </div>
 
@@ -41,8 +37,8 @@
           <transition name="hero-content" mode="out-in">
             <div :key="currentSlide" class="max-w-5xl mx-auto text-center">
               <div
-                class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full 
-                          bg-white/10 border border-white/20 backdrop-blur-xl"
+                class="inline-flex items-center gap-2 mb-7 px-4 py-2 rounded-full
+                        bg-white/10 border border-white/20 backdrop-blur-xl"
               >
                 <div class="w-2 h-2 bg-[#9F153E] rounded-full"></div>
                 <span class="text-xs font-bold tracking-widest text-white/90 uppercase">
@@ -56,29 +52,35 @@
                 {{ heroSlides[currentSlide].title }}
               </h1>
 
-              <p class="text-base sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto select-none">
+              <p
+                class="text-base sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto select-none leading-relaxed"
+              >
                 {{ heroSlides[currentSlide].subtitle }}
               </p>
 
               <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <router-link
                   to="/about"
-                  class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl
+                  class="inline-flex items-center justify-center gap-2 px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl
                           bg-[#9F153E] hover:bg-[#8f4740] text-white font-bold
-                          transform hover:scale-105 transition-all duration-300 shadow-xl text-sm sm:text-base"
+                          transition-all duration-300 ease-in-out
+                          hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30
+                          text-sm sm:text-base"
                 >
                   <span>Learn More</span>
-                  
                 </router-link>
 
                 <router-link
                   to="/contact"
-                  class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl
-                          border-2 border-white/30 backdrop-blur-xl text-white font-bold
-                          hover:bg-white/10 transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
+                  class="inline-flex items-center justify-center gap-2 px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl
+                          border border-white/30 backdrop-blur-xl text-white font-bold
+                          hover:bg-white/10 hover:border-white/50
+                          transition-all duration-300 ease-in-out
+                          hover:-translate-y-0.5
+                          text-sm sm:text-base"
                 >
                   <span>Contact Us</span>
-                  <PhoneIcon class="w-5 h-5" />
+                  <PhoneIcon class="w-4 h-4" />
                 </router-link>
               </div>
             </div>
@@ -93,33 +95,35 @@
         <div class="container mx-auto px-6 flex justify-between items-center">
           <button
             @click="previousSlide"
-            class="pointer-events-auto w-12 h-12 rounded-full 
+            class="pointer-events-auto w-11 h-11 rounded-full
                    bg-white/10 backdrop-blur-xl border border-white/20
-                   flex items-center justify-center 
-                   hover:bg-white/20 transition-all duration-300"
+                   flex items-center justify-center
+                   hover:bg-white/20 hover:border-white/40
+                   transition-all duration-300 ease-in-out"
           >
-            <ChevronLeftIcon class="w-6 h-6 text-white" />
+            <ChevronLeftIcon class="w-5 h-5 text-white" />
           </button>
 
           <button
             @click="nextSlide"
-            class="pointer-events-auto w-12 h-12 rounded-full 
+            class="pointer-events-auto w-11 h-11 rounded-full
                    bg-white/10 backdrop-blur-xl border border-white/20
-                   flex items-center justify-center 
-                   hover:bg-white/20 transition-all duration-300"
+                   flex items-center justify-center
+                   hover:bg-white/20 hover:border-white/40
+                   transition-all duration-300 ease-in-out"
           >
-            <ChevronRightIcon class="w-6 h-6 text-white" />
+            <ChevronRightIcon class="w-5 h-5 text-white" />
           </button>
         </div>
       </div>
 
       <!-- Slide Indicators -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2">
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2 items-center">
         <button
           v-for="(slide, index) in heroSlides"
           :key="slide.id"
           @click="goToSlide(index)"
-          class="transition-all duration-300"
+          class="transition-all duration-300 ease-in-out"
           :class="[
             currentSlide === index
               ? 'w-8 h-2 bg-[#9F153E]'
@@ -136,61 +140,54 @@
       <section
         id="about"
         ref="aboutSection"
-        class="py-16 md:py-20 bg-gradient-to-b from-black to-gray-900 relative"
+        class="py-20 md:py-28 bg-gradient-to-b from-black to-gray-900 relative"
       >
         <div class="container mx-auto px-6">
           <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12 md:mb-16 relative z-10 scroll-reveal">
-              <div class="inline-flex items-center gap-2 mb-4">
+            <div class="text-center mb-14 md:mb-20 relative z-10 scroll-reveal">
+              <div class="inline-flex items-center gap-2 mb-5">
                 <div class="w-8 h-px bg-[#9F153E]"></div>
-                <span
-                  class="text-xs sm:text-sm uppercase tracking-widest text-[#9F153E] font-bold"
-                >
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#9F153E] font-bold">
                   Our Story
                 </span>
                 <div class="w-8 h-px bg-[#9F153E]"></div>
               </div>
 
-              <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 md:mb-6">
+              <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-5 leading-tight">
                 Eastern India's Most Diversified<br />
                 <span class="text-[#9F153E]">Transport Group</span>
               </h2>
 
-              <p class="text-base sm:text-lg text-gray-400 max-w-3xl mx-auto">
+              <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
                 Founded in 1974 by Mr. Mahesh Kumar Periwal, serving 20+ major corporate clients
                 with comprehensive fleet solutions.
               </p>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
               <div
                 v-for="(card, index) in aboutCards"
                 :key="index"
-                class="group p-6 md:p-8 rounded-2xl transition-all duration-500 relative overflow-hidden scroll-reveal"
-                :class="[
-                  index === 0
-                    ? 'bg-white/5 hover:bg-white/10 hover:shadow-xl border border-white/10'
-                    : 'bg-white/5 hover:bg-white/10 hover:shadow-xl border border-white/10'
-                ]"
-                :style="{ transitionDelay: `${index * 100}ms` }"
+                class="group p-7 md:p-8 rounded-2xl
+                       bg-white/5 border border-white/10
+                       hover:bg-white/[0.08] hover:border-white/20
+                       hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/40
+                       transition-all duration-300 ease-in-out
+                       relative overflow-hidden scroll-reveal"
+                :style="{ transitionDelay: `${index * 80}ms` }"
               >
-                <div
-                  class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl mb-4
-                            transition-transform duration-300 group-hover:scale-110 relative z-20"
-                  :class="[index === 0 ? 'bg-[#9F153E]/20' : 'bg-[#9F153E]/20']"
-                >
-                  <component :is="card.icon" class="w-6 h-6 md:w-7 md:h-7 text-white" />
+                <div class="w-14 h-14 mb-5">
+                  <img
+                    :src="card.icon"
+                    :alt="card.title"
+                    class="w-14 h-14 object-contain pointer-events-none select-none"
+                  />
                 </div>
 
-                <h3
-                  class="text-lg md:text-xl font-black mb-2 md:mb-3 relative z-20 text-white"
-                >
+                <h3 class="text-base md:text-lg font-bold mb-2 text-white leading-snug">
                   {{ card.title }}
                 </h3>
-                <p
-                  class="text-xs sm:text-sm leading-relaxed relative z-20"
-                  :class="index === 0 ? 'text-white/90' : 'text-gray-300'"
-                >
+                <p class="text-sm leading-relaxed text-gray-400">
                   {{ card.description }}
                 </p>
               </div>
@@ -199,89 +196,84 @@
         </div>
       </section>
 
-     <!-- Services Section -->
-<section
-  id="services"
-  ref="servicesSection"
-  class="py-16 md:py-20 bg-gray-50 relative"
->
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-12 md:mb-16 max-w-4xl mx-auto scroll-reveal">
-      <div class="inline-flex items-center gap-2 mb-4">
-        <div class="w-8 h-px bg-[#9F153E]"></div>
-        <span
-          class="text-xs sm:text-sm uppercase tracking-widest text-[#9F153E] font-bold"
-        >
-          Services
-        </span>
-        <div class="w-8 h-px bg-[#9F153E]"></div>
-      </div>
+      <!-- Services Section -->
+      <section
+        id="services"
+        ref="servicesSection"
+        class="py-20 md:py-28 bg-gray-50 relative"
+      >
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-14 md:mb-20 max-w-4xl mx-auto scroll-reveal">
+            <div class="inline-flex items-center gap-2 mb-5">
+              <div class="w-8 h-px bg-[#9F153E]"></div>
+              <span class="text-xs sm:text-sm uppercase tracking-widest text-[#9F153E] font-bold">
+                Services
+              </span>
+              <div class="w-8 h-px bg-[#9F153E]"></div>
+            </div>
 
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-3 md:mb-4">
-        Complete <span class="text-[#9F153E]">Logistics Solutions</span>
-      </h2>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
+              Complete <span class="text-[#9F153E]">Logistics Solutions</span>
+            </h2>
 
-      <p class="text-base sm:text-lg text-gray-600">
-        From heavy equipment to specialized cargo
-      </p>
-    </div>
-
-    <div class="max-w-7xl mx-auto">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-        <router-link
-          v-for="(service, index) in services"
-          :key="index"
-          to="/services"
-          class="group block p-5 md:p-6 rounded-2xl bg-white border-2 border-gray-100
-                 hover:border-[#9F153E]/30 hover:shadow-xl
-                 transition-all duration-500 cursor-pointer
-                 hover:-translate-y-1 overflow-hidden relative scroll-reveal"
-          :style="{ transitionDelay: `${index * 50}ms` }"
-        >
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-[#9F153E] to-[#8f4740] 
-                   opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"
-          ></div>
-
-          <div
-            class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl mb-4
-                   bg-[#9F153E]/10 group-hover:bg-white/20
-                   transition-all duration-500 group-hover:scale-110 relative z-20"
-          >
-            <component
-              :is="service.icon"
-              class="w-7 h-7 md:w-8 md:h-8 text-[#9F153E] group-hover:text-white 
-                     transition-colors duration-500"
-            />
+            <p class="text-base sm:text-lg text-gray-500 leading-relaxed">
+              From heavy equipment to specialized cargo
+            </p>
           </div>
 
-          <h3
-            class="text-base md:text-lg font-black text-gray-900 mb-2 
-                   group-hover:text-white transition-colors duration-500 relative z-20"
-          >
-            {{ service.title }}
-          </h3>
-          <p
-            class="text-xs sm:text-sm text-gray-600 leading-relaxed
-                   group-hover:text-white/90 transition-colors duration-500 relative z-20"
-          >
-            {{ service.description }}
-          </p>
-        </router-link>
-      </div>
-    </div>
-  </div>
-</section>
+          <div class="max-w-7xl mx-auto">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+              <router-link
+                v-for="(service, index) in services"
+                :key="index"
+                to="/services"
+                class="group block p-6 rounded-2xl bg-white border border-gray-100
+                       hover:border-[#9F153E]/20 hover:shadow-lg
+                       transition-all duration-300 ease-in-out
+                       hover:-translate-y-1
+                       overflow-hidden relative scroll-reveal"
+                :style="{ transitionDelay: `${index * 40}ms` }"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-[#9F153E] to-[#8f4740]
+                         opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-0"
+                ></div>
 
+                <!-- ✅ CHANGED: icon wrapper now has a fixed white bg so the red gradient never bleeds into it -->
+                <div class="w-12 h-12 mb-4 relative z-20 bg-white rounded-xl p-2 flex items-center justify-center">
+                  <img
+                    :src="service.icon"
+                    :alt="service.title"
+                    class="w-full h-full object-contain pointer-events-none select-none"
+                  />
+                </div>
+
+                <h3
+                  class="text-sm md:text-base font-bold text-gray-900 mb-2
+                         group-hover:text-white transition-colors duration-300 relative z-20 leading-snug"
+                >
+                  {{ service.title }}
+                </h3>
+                <p
+                  class="text-xs text-gray-500 leading-relaxed
+                         group-hover:text-white/80 transition-colors duration-300 relative z-20"
+                >
+                  {{ service.description }}
+                </p>
+              </router-link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Industry Sectors -->
       <section
         ref="sectorsSection"
-        class="py-16 md:py-20 bg-gradient-to-t from-black to-gray-900 relative"
+        class="py-20 md:py-28 bg-gradient-to-t from-black to-gray-900 relative"
       >
         <div class="container mx-auto px-6">
-          <div class="text-center mb-10 md:mb-12 scroll-reveal">
-            <h3 class="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-2">
+          <div class="text-center mb-14 md:mb-16 scroll-reveal">
+            <h3 class="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3">
               Industry Sectors
             </h3>
             <p class="text-base sm:text-lg text-gray-400">
@@ -290,30 +282,24 @@
           </div>
 
           <div
-            class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto"
+            class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 md:gap-8 max-w-4xl mx-auto"
           >
             <div
               v-for="(sector, index) in sectors"
               :key="index"
-              class="text-center group cursor-pointer scroll-reveal"
-              :style="{ transitionDelay: `${index * 100}ms` }"
+              class="text-center group scroll-reveal"
+              :style="{ transitionDelay: `${index * 80}ms` }"
             >
-              <div
-                class="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full border-2 border-white/10
-                          group-hover:border-[#9F153E] group-hover:scale-110
-                          transition-all duration-500 flex items-center justify-center
-                          bg-white/5 group-hover:bg-[#9F153E] relative overflow-hidden"
-              >
-                <component
-                  :is="sector.icon"
-                  class="w-8 h-8 sm:w-10 sm:h-10 text-[#9F153E] group-hover:text-white 
-                          transition-colors duration-500 relative z-20"
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3">
+                <img
+                  :src="sector.icon"
+                  :alt="sector.name"
+                  class="w-full h-full object-contain pointer-events-none select-none"
                 />
               </div>
-
               <p
-                class="text-[10px] sm:text-xs md:text-sm uppercase tracking-wider text-gray-400 mt-3
-                        group-hover:text-white transition-colors duration-300 font-bold relative z-20"
+                class="text-xs sm:text-sm uppercase tracking-wider text-gray-400
+                        font-semibold leading-snug"
               >
                 {{ sector.name }}
               </p>
@@ -323,10 +309,10 @@
       </section>
 
       <!-- Clients Section -->
-      <section ref="clientsSection" class="py-12 bg-white  relative">
+      <section ref="clientsSection" class="py-16 md:py-20 bg-white relative">
         <div class="container mx-auto px-6">
-          <div class="text-center mb-6">
-            <span class="text-xs uppercase tracking-widest text-gray-500 font-bold scroll-reveal">
+          <div class="text-center mb-10 scroll-reveal">
+            <span class="text-xs uppercase tracking-widest text-gray-400 font-bold">
               Our Partners
             </span>
           </div>
@@ -334,15 +320,15 @@
           <!-- Desktop / Tablet: marquee -->
           <div class="relative max-w-full mx-auto hidden md:block scroll-reveal">
             <div
-              class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"
+              class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"
             ></div>
             <div
-              class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"
+              class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"
             ></div>
 
             <div class="overflow-hidden py-4">
               <div
-                class="flex gap-8 items-center marquee-content"
+                class="flex gap-6 items-center marquee-content"
                 :style="{ animationPlayState: scrollPaused ? 'paused' : 'running' }"
                 @mouseenter="scrollPaused = true"
                 @mouseleave="scrollPaused = false"
@@ -354,15 +340,15 @@
                 >
                   <div
                     class="w-24 h-24 flex items-center justify-center p-3
-                              rounded-lg border border-transparent
-                              hover:border-[#9F153E]/20 hover:bg-gray-50
-                              opacity-80 hover:opacity-100
-                              hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden"
+                            rounded-xl border border-gray-100
+                            hover:border-gray-200 hover:shadow-sm
+                            opacity-60 hover:opacity-100
+                            transition-all duration-300 ease-in-out cursor-pointer"
                   >
                     <img
                       :src="client.logo"
                       :alt="client.name"
-                      class="w-full h-full object-contain relative z-20 pointer-events-none select-none"
+                      class="w-full h-full object-contain pointer-events-none select-none"
                     />
                   </div>
                 </div>
@@ -374,7 +360,7 @@
           <div class="md:hidden mt-2 scroll-reveal">
             <div
               class="flex gap-4 overflow-x-auto py-4 px-1
-                     scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent
+                     scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent
                      snap-x snap-mandatory horizontal-scroll"
             >
               <div
@@ -384,15 +370,15 @@
               >
                 <div
                   class="w-24 h-24 flex items-center justify-center p-3
-                            rounded-lg border border-transparent
-                            hover:border-[#9F153E]/20 hover:bg-gray-50
-                            opacity-80 hover:opacity-100
-                            hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden"
+                          rounded-xl border border-gray-100
+                          hover:border-gray-200 hover:shadow-sm
+                          opacity-60 hover:opacity-100
+                          transition-all duration-300 ease-in-out cursor-pointer"
                 >
                   <img
                     :src="client.logo"
                     :alt="client.name"
-                    class="w-full h-full object-contain relative z-20 pointer-events-none select-none"
+                    class="w-full h-full object-contain pointer-events-none select-none"
                   />
                 </div>
               </div>
@@ -407,9 +393,26 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-/* ---------------- HEROICONS IMPORTS ---------------- */
+import e from '/icons/e.svg'
+import crane from '/icons/crane.svg'
+import steel from '/icons/steel.svg'
+import container from '/icons/container.svg'
+import owc from '/icons/owc.svg'
+import odc from '/icons/odc.svg'
+import lpg from '/icons/lpg.svg'
+import gt from '/icons/gt.svg'
+import axle from '/icons/axle.svg'
+import oil from '/icons/oil.svg'
+import i from '/icons/i.svg'
+import coal from '/icons/coal.svg'
+import power from '/icons/power.svg'
+import india from '/icons/india.svg'
+import aio from '/icons/aio.svg'
+import tick from '/icons/tick.svg'
+import team from '/icons/team.svg'
+import t from '/icons/t.svg'
 
-/* Solid icons (strong, industrial) */
+
 import {
   TrophyIcon,
   CubeIcon,
@@ -424,7 +427,6 @@ import {
   CircleStackIcon
 } from '@heroicons/vue/24/solid'
 
-/* Outline icons (technical / logistics) */
 import {
   WrenchScrewdriverIcon,
   ArrowsPointingOutIcon,
@@ -440,16 +442,12 @@ import {
   PhoneIcon
 } from '@heroicons/vue/24/outline'
 
-/* ---------------- STATE ---------------- */
-
 const scrollPaused = ref(false)
 
 const aboutSection = ref(null)
 const servicesSection = ref(null)
 const sectorsSection = ref(null)
 const clientsSection = ref(null)
-
-/* ---------------- HERO SLIDER ---------------- */
 
 const currentSlide = ref(0)
 let slideInterval = null
@@ -486,7 +484,7 @@ const heroSlides = ref([
   {
     id: 5,
     type: 'image',
-    media: '/assets/hero4.jpg',
+    media: '/assets/hero4.jpeg',
     title: 'TRUSTED BY LEADERS',
     subtitle: 'Serving Indias Premier PSUs & Corporations'
   }
@@ -498,8 +496,7 @@ const nextSlide = () => {
 
 const previousSlide = () => {
   currentSlide.value =
-    (currentSlide.value - 1 + heroSlides.value.length) %
-    heroSlides.value.length
+    (currentSlide.value - 1 + heroSlides.value.length) % heroSlides.value.length
 }
 
 const goToSlide = index => {
@@ -518,117 +515,109 @@ const stopAutoSlide = () => {
   }
 }
 
-/* ---------------- ABOUT ---------------- */
-
 const aboutCards = ref([
   {
-    icon: TrophyIcon,
+    icon: t,
     title: 'Pioneers Since 1974',
     description: 'First in Eastern India for girder & segment transportation'
   },
   {
-    icon: CubeIcon,
+    icon: aio,
     title: 'All-in-One Solution',
     description: 'Complete fleet from trailers to tankers under one roof'
   },
   {
-    icon: GlobeAltIcon,
+    icon: india,
     title: 'Pan-India Network',
     description: '9 strategic branches ensuring nationwide coverage'
   },
   {
-    icon: CheckBadgeIcon,
+    icon: tick,
     title: '5000+ Girders Moved',
     description: 'Major infrastructure projects across India'
   },
   {
-    icon: TruckIcon,
+    icon: e,
     title: 'Extensive Fleet',
     description: '225+ vehicles including 75 LPG tankers'
   },
   {
-    icon: UserGroupIcon,
+    icon: team,
     title: 'Industry Trusted',
     description: 'Serving 20+ major PSUs and enterprises'
   }
 ])
 
-/* ---------------- SERVICES (IMPROVED ICONS) ---------------- */
-
 const services = ref([
   {
-    icon: WrenchScrewdriverIcon,
+    icon: e,
     title: 'Heavy Equipment',
     description: 'Specialized transport for machinery and industrial equipment'
   },
   {
-    icon: ArrowsPointingOutIcon,
+    icon: odc,
     title: 'ODC Cargo',
     description: 'Over-dimensional cargo up to 150 MT capacity'
   },
   {
-    icon: AdjustmentsHorizontalIcon,
+    icon: owc,
     title: 'OWC Cargo',
     description: 'Odd-weight cargo for heavy and complex industrial loads'
   },
   {
-    icon: Squares2X2Icon,
+    icon: gt,
     title: 'Girder Transport',
     description: 'Expert handling of bridge and flyover girders up to 125 feet'
   },
   {
-    icon: TruckIcon,
+    icon: lpg,
     title: 'LPG Tankers',
     description: '75+ tankers for safe bulk LPG transportation'
   },
   {
-    icon: CloudIcon,
+    icon: lpg,
     title: 'Ammonia Gas Transport',
     description: 'Secure transport of anhydrous ammonia gas'
   },
   {
-    icon: CogIcon,
+    icon: steel,
     title: 'Steel Logistics',
     description: 'Monthly transport of 20,000+ MT finished steel products'
   },
   {
-    icon: RectangleStackIcon,
+    icon: container,
     title: 'Port & Container Transport',
     description: 'TEU & FEU container movement and port-related logistics'
   },
   {
-    icon: ArchiveBoxIcon,
+    icon: steel,
     title: 'Industrial & Pipe Transport',
     description: 'Transportation of pipes and industrial products'
   },
   {
-    icon: MapIcon,
+    icon: owc,
     title: 'Project Cargo',
     description: 'End-to-end logistics for large infrastructure projects'
   },
   {
-    icon: WrenchScrewdriverIcon,
+    icon: crane,
     title: 'Crane Services',
     description: 'Mobile cranes and heavy lifting equipment on rental'
   },
   {
-    icon: TruckIcon,
+    icon: axle,
     title: 'Trailer & Axle Rental',
     description: 'Low-bed trailers and hydraulic axles for heavy cargo'
   }
 ])
 
-/* ---------------- SECTORS (STRONG & CLEAR) ---------------- */
-
 const sectors = ref([
-  { name: 'Infrastructure', icon: BuildingOffice2Icon },
-  { name: 'Oil Marketing Companies', icon: FireIcon },
-  { name: 'Steel', icon: CogIcon },
-  { name: 'Power', icon: BoltIcon },
-  { name: 'Coal', icon: CircleStackIcon }
+  { name: 'Infrastructure', icon: i },
+  { name: 'Oil Marketing Companies', icon: oil },
+  { name: 'Steel', icon: steel },
+  { name: 'Power', icon: power},
+  { name: 'Coal', icon: coal}
 ])
-
-/* ---------------- CLIENTS ---------------- */
 
 const clients = ref([
   { name: 'HP', logo: '/assets/clients/hp.png' },
@@ -657,8 +646,6 @@ const clients = ref([
   { name: 'L&T', logo: '/assets/clients/lt.png' }
 ])
 
-/* ---------------- SCROLL REVEAL ---------------- */
-
 let revealObserver = null
 
 const setupScrollReveal = () => {
@@ -667,7 +654,8 @@ const setupScrollReveal = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible')
-          revealObserver?.unobserve(entry.target)
+        } else {
+          entry.target.classList.remove('is-visible')
         }
       })
     },
@@ -678,8 +666,6 @@ const setupScrollReveal = () => {
     .querySelectorAll('.scroll-reveal')
     .forEach(el => revealObserver.observe(el))
 }
-
-/* ---------------- LIFECYCLE ---------------- */
 
 onMounted(() => {
   startAutoSlide()
@@ -717,37 +703,36 @@ onBeforeUnmount(() => {
 
 .hero-fade-enter-from {
   opacity: 0;
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .hero-fade-leave-to {
   opacity: 0;
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
 .hero-content-enter-active {
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
 }
 
 .hero-content-leave-active {
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
 }
 
 .hero-content-enter-from {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(30px);
 }
 
 .hero-content-leave-to {
   opacity: 0;
-  transform: translateY(-40px);
+  transform: translateY(-20px);
 }
 
-/* Scroll reveal animations */
 .scroll-reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .scroll-reveal.is-visible {
